@@ -1,0 +1,54 @@
+{
+  "id": "hp-059-baltoy",
+  "name": "Baltoy \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-059",
+      "name": "Baltoy \u03b4",
+      "set": "HP",
+      "number": 59,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "fire",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Psybeam",
+          "cost": [
+            "R"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Confused."
+        },
+        {
+          "name": "Spinning Attack",
+          "cost": [
+            "M",
+            "C"
+          ],
+          "damage": 30,
+          "text": ""
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "psybeam_damage",
+      "expected": 10
+    },
+    {
+      "name": "spinning_attack_damage",
+      "expected": 30
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_059_baltoy.rs"
+}

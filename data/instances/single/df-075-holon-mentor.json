@@ -1,0 +1,25 @@
+{
+  "id": "df-075-holon-mentor",
+  "name": "Holon Mentor - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_075_holon_mentor.rs",
+  "cards": [
+    {
+      "id": "df-075",
+      "name": "Holon Mentor",
+      "set": "DF",
+      "number": 75,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pok\u00e9mon. When your turn ends, discard this card. Discard a card from your hand. If you can't discard a card from your hand, you can't play this card. Search your deck for up to 3 Basic Pok\u00e9mon that each has 100 HP or less, show them to your opponent, and put them into your hand. Shuffle your deck afterward."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

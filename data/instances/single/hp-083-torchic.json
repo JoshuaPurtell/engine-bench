@@ -1,0 +1,32 @@
+{
+  "id": "hp-083-torchic",
+  "name": "Torchic - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_083_torchic.rs",
+  "cards": [
+    {
+      "id": "hp-083",
+      "name": "Torchic",
+      "set": "HP",
+      "number": 83,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": ["fire"],
+      "weakness": {"type": "water", "modifier": "x2"},
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {"name": "Peck", "cost": ["colorless"], "damage": 10, "text": ""},
+        {"name": "Flare", "cost": ["fire", "colorless"], "damage": 20, "text": ""}
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "peck_damage", "description": "Test that Peck deals 10 damage"},
+    {"name": "flare_damage", "description": "Test that Flare deals 20 damage"}
+  ]
+}

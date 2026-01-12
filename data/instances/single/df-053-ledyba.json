@@ -1,0 +1,23 @@
+{
+  "id": "df-053-ledyba",
+  "name": "Ledyba \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_053_ledyba.rs",
+  "cards": [
+    {
+      "id": "df-053",
+      "name": "Ledyba \u03b4",
+      "set": "DF",
+      "number": 53,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

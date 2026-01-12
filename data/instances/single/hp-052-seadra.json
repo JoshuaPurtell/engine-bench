@@ -1,0 +1,49 @@
+{
+  "id": "hp-052-seadra",
+  "name": "Seadra Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_052_seadra.rs",
+  "cards": [
+    {
+      "id": "hp-052",
+      "name": "Seadra δ",
+      "set": "HP",
+      "number": 52,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Horsea",
+      "hp": 70,
+      "types": ["fire"],
+      "delta_species": true,
+      "weakness": {
+        "type": "water",
+        "modifier": "x2"
+      },
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Searing Flame",
+          "cost": ["fire"],
+          "damage": 10,
+          "text": "The Defending Pokémon is now Burned."
+        },
+        {
+          "name": "Combustion",
+          "cost": ["fire", "colorless"],
+          "damage": 40,
+          "text": ""
+        }
+      ],
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "searing_flame_burns",
+      "description": "Test that Searing Flame inflicts Burned status"
+    }
+  ]
+}

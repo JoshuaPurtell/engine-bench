@@ -1,0 +1,57 @@
+{
+  "id": "hp-031-torkoal",
+  "name": "Torkoal",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-031",
+      "name": "Torkoal",
+      "set": "HP",
+      "number": 31,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 70,
+      "types": [
+        "fire"
+      ],
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "C"
+          ],
+          "damage": 0,
+          "text": "Draw 2 cards."
+        },
+        {
+          "name": "Searing Flame",
+          "cost": [
+            "R",
+            "C",
+            "C"
+          ],
+          "damage": 40,
+          "text": "The Defending Pok\u00e9mon is now Burned."
+        }
+      ],
+      "weakness": "water",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "collect_cards",
+      "expected": 2
+    },
+    {
+      "name": "searing_flame_damage",
+      "expected": 40
+    },
+    {
+      "name": "searing_flame_burns",
+      "expected": true
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_031_torkoal.rs"
+}

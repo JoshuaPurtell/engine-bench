@@ -1,0 +1,22 @@
+{
+  "id": "hp-088-mr-stones-project",
+  "name": "Mr. Stone's Project - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_088_mr_stones_project.rs",
+  "cards": [
+    {
+      "id": "hp-088",
+      "name": "Mr. Stone's Project",
+      "set": "HP",
+      "number": 88,
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "text": "Search your deck for up to 2 basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "searches_basic_energy", "description": "Test that Mr. Stone's Project searches for up to 2 basic Energy"}
+  ]
+}

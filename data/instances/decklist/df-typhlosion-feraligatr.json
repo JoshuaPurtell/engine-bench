@@ -1,0 +1,112 @@
+{
+  "id": "df-typhlosion-feraligatr",
+  "name": "Typhlosion/Feraligatr Delta Build",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A competitive Dragon Frontiers deck featuring the Typhlosion δ and Feraligatr δ lines. Tests the agent's ability to implement full evolution lines with pre-evolutions and complex Stage 2 powers.",
+  "cards": [
+    {
+      "instance_id": "df-045-cyndaquil",
+      "name": "Cyndaquil δ",
+      "count": 4,
+      "role": "Basic for Typhlosion line"
+    },
+    {
+      "instance_id": "df-036-quilava",
+      "name": "Quilava δ",
+      "count": 2,
+      "role": "Stage 1 for Typhlosion line"
+    },
+    {
+      "instance_id": "df-012-typhlosion",
+      "name": "Typhlosion δ",
+      "count": 2,
+      "role": "Shady Move power - move damage counters"
+    },
+    {
+      "instance_id": "df-067-totodile",
+      "name": "Totodile δ",
+      "count": 4,
+      "role": "Basic for Feraligatr line"
+    },
+    {
+      "instance_id": "df-027-croconaw",
+      "name": "Croconaw δ",
+      "count": 2,
+      "role": "Stage 1 for Feraligatr line"
+    },
+    {
+      "instance_id": "df-002-feraligatr",
+      "name": "Feraligatr δ",
+      "count": 2,
+      "role": "Battle Aura body - +10 damage for delta attacks"
+    },
+    {
+      "instance_id": "df-070-vulpix",
+      "name": "Vulpix δ",
+      "count": 3,
+      "role": "Basic for Ninetales line, Confuse Ray tech"
+    },
+    {
+      "instance_id": "df-008-ninetales",
+      "name": "Ninetales δ",
+      "count": 2,
+      "role": "Volunteer power - healing and re-evolution"
+    },
+    {
+      "instance_id": "df-009-pinsir",
+      "name": "Pinsir δ",
+      "count": 2,
+      "role": "Armor body - damage reduction tank"
+    },
+    {
+      "instance_id": "df-003-heracross",
+      "name": "Heracross δ",
+      "count": 2,
+      "role": "Shining Horn body + anti-ex tech"
+    }
+  ],
+  "trainers": [
+    {
+      "instance_id": "df-082-tv-reporter",
+      "name": "TV Reporter",
+      "count": 4,
+      "role": "Draw support"
+    },
+    {
+      "instance_id": "df-079-prof-elms-training",
+      "name": "Professor Elm's Training Method",
+      "count": 3,
+      "role": "Evolution search"
+    },
+    {
+      "instance_id": "df-072-buffer-piece",
+      "name": "Buffer Piece",
+      "count": 2,
+      "role": "Damage reduction tool"
+    }
+  ],
+  "energy": [
+    {
+      "name": "Fire Energy",
+      "count": 10,
+      "note": "Energy cards don't need implementation"
+    },
+    {
+      "name": "Water Energy",
+      "count": 8,
+      "note": "Energy cards don't need implementation"
+    },
+    {
+      "name": "Delta Rainbow Energy",
+      "count": 4,
+      "note": "Special energy - provides any type to delta Pokemon"
+    }
+  ],
+  "total_cards": 56,
+  "pokemon_count": 25,
+  "trainer_count": 9,
+  "energy_count": 22,
+  "unique_implementations": 13,
+  "notes": "This decklist tests 10 Pokemon (5 with powers/bodies, 5 pre-evolutions) and 3 trainers. The pre-evolutions test basic attack implementations while the Stage 2s test complex power/body implementations. Energy cards are excluded from testing as they don't require custom code."
+}

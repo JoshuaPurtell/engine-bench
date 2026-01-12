@@ -1,0 +1,27 @@
+{
+  "id": "hp-091-claw-fossil",
+  "name": "Claw Fossil - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_091_claw_fossil.rs",
+  "cards": [
+    {
+      "id": "hp-091",
+      "name": "Claw Fossil",
+      "set": "HP",
+      "number": 91,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "fossil": true,
+      "hp": 40,
+      "text": "Play Claw Fossil as if it were a Basic Pokémon. While in play, Claw Fossil counts as a Colorless Pokémon (as well as a Trainer card). Can't retreat or be affected by Special Conditions. If Knocked Out, doesn't count as a Knocked Out Pokémon.",
+      "abilities": [
+        {"name": "Jagged Stone", "type": "poke_body", "text": "If Claw Fossil is your Active Pokémon and is damaged by an opponent's attack (even if Claw Fossil is Knocked Out), put 1 damage counter on the Attacking Pokémon."}
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "jagged_stone_counter_damage", "description": "Test that Jagged Stone puts damage counter on attacker"}
+  ]
+}

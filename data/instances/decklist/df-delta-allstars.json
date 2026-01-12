@@ -1,0 +1,71 @@
+{
+  "id": "df-delta-allstars",
+  "name": "Delta All-Stars - Dragon Frontiers Showcase",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A showcase decklist featuring all implemented Dragon Frontiers delta Pokemon. Tests the agent's ability to implement multiple cards that work together.",
+  "cards": [
+    {
+      "instance_id": "df-001-ampharos",
+      "name": "Ampharos δ",
+      "count": 2,
+      "role": "Holon Veil body + Delta Circle attack"
+    },
+    {
+      "instance_id": "df-002-feraligatr",
+      "name": "Feraligatr δ",
+      "count": 2,
+      "role": "Battle Aura body - boosts all delta attacks"
+    },
+    {
+      "instance_id": "df-003-heracross",
+      "name": "Heracross δ",
+      "count": 3,
+      "role": "Shining Horn body + Extra Claws anti-ex tech"
+    },
+    {
+      "instance_id": "df-004-meganium",
+      "name": "Meganium δ",
+      "count": 2,
+      "role": "Evolutionary Call - deck search on evolve"
+    },
+    {
+      "instance_id": "df-005-milotic",
+      "name": "Milotic δ",
+      "count": 2,
+      "role": "Sharing - steal opponent's Supporters"
+    },
+    {
+      "instance_id": "df-007-nidoqueen",
+      "name": "Nidoqueen δ",
+      "count": 2,
+      "role": "Invitation search + Vengeance attack"
+    },
+    {
+      "instance_id": "df-008-ninetales",
+      "name": "Ninetales δ",
+      "count": 2,
+      "role": "Volunteer - deck cycle power"
+    },
+    {
+      "instance_id": "df-009-pinsir",
+      "name": "Pinsir δ",
+      "count": 3,
+      "role": "Armor body - damage reduction tank"
+    },
+    {
+      "instance_id": "df-010-snorlax",
+      "name": "Snorlax δ",
+      "count": 2,
+      "role": "Dozing heal + Bedhead sleep lock"
+    },
+    {
+      "instance_id": "df-012-typhlosion",
+      "name": "Typhlosion δ",
+      "count": 2,
+      "role": "Shady Move - damage counter manipulation"
+    }
+  ],
+  "total_pokemon": 22,
+  "unique_cards": 10
+}

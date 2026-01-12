@@ -1,0 +1,56 @@
+{
+  "id": "hp-071-numel",
+  "name": "Numel",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-071",
+      "name": "Numel",
+      "set": "HP",
+      "number": 71,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 60,
+      "types": [
+        "fire"
+      ],
+      "attacks": [
+        {
+          "name": "Kindle",
+          "cost": [
+            "R"
+          ],
+          "damage": 10,
+          "text": "You may discard a Fire Energy card attached to Numel. If you do, discard an Energy card attached to the Defending Pok\u00e9mon."
+        },
+        {
+          "name": "Stomp",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 20,
+          "text": "Flip a coin. If heads, this attack does 20 damage plus 10 more damage."
+        }
+      ],
+      "weakness": "water",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "kindle_damage",
+      "expected": 10
+    },
+    {
+      "name": "stomp_base",
+      "expected": 20
+    },
+    {
+      "name": "stomp_bonus",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_071_numel.rs"
+}

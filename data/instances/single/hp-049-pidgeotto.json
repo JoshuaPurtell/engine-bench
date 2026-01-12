@@ -1,0 +1,32 @@
+{
+  "id": "hp-049-pidgeotto",
+  "name": "Pidgeotto Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_049_pidgeotto.rs",
+  "cards": [
+    {
+      "id": "hp-049",
+      "name": "Pidgeotto δ",
+      "set": "HP",
+      "number": 49,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Pidgey",
+      "hp": 70,
+      "types": ["lightning"],
+      "delta_species": true,
+      "weakness": {"type": "lightning", "modifier": "x2"},
+      "resistance": {"type": "fighting", "modifier": "-30"},
+      "retreat_cost": 0,
+      "abilities": [],
+      "attacks": [
+        {"name": "Whirlwind", "cost": ["lightning", "colorless"], "damage": 30, "text": "Your opponent switches the Defending Pokemon with 1 of his or her Benched Pokemon."}
+      ],
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "whirlwind_forces_switch", "description": "Test that Whirlwind forces opponent to switch"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "df-032-kirlia",
+  "name": "Kirlia - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_032_kirlia.rs",
+  "cards": [
+    {
+      "id": "df-032",
+      "name": "Kirlia",
+      "set": "DF",
+      "number": 32,
+      "rarity": "uncommon",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

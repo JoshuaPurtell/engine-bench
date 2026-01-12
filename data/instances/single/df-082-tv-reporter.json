@@ -1,0 +1,29 @@
+{
+  "id": "df-082-tv-reporter",
+  "name": "TV Reporter - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_082_tv_reporter.rs",
+  "cards": [
+    {
+      "id": "df-082",
+      "name": "TV Reporter",
+      "set": "DF",
+      "number": 82,
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "Draw 3 cards. Then, discard a card from your hand.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "draws_three_cards",
+      "description": "Test that TV Reporter draws 3 cards"
+    },
+    {
+      "name": "requires_discard",
+      "description": "Test that TV Reporter requires discarding 1 card"
+    }
+  ]
+}

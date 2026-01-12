@@ -1,0 +1,26 @@
+{
+  "id": "df-kingdra-depths",
+  "name": "Kingdra Delta Depths",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A Water-focused Dragon Frontiers deck featuring Kingdra ex δ's Extra Smoke body for team protection and Dragon Pump for high damage output. Pairs with Feraligatr δ for Battle Aura synergy.",
+  "cards": [
+    {"instance_id": "df-050-horsea", "name": "Horsea δ", "count": 4, "role": "Basic for Kingdra line, Aqua Pump scaling"},
+    {"instance_id": "df-022-seadra", "name": "Seadra δ", "count": 3, "role": "Stage 1 with Aqua Pump and Waterfall"},
+    {"instance_id": "df-094-kingdra-ex", "name": "Kingdra ex δ", "count": 2, "role": "Main attacker with Extra Smoke body"},
+    {"instance_id": "df-067-totodile", "name": "Totodile δ", "count": 3, "role": "Basic for Feraligatr line"},
+    {"instance_id": "df-027-croconaw", "name": "Croconaw δ", "count": 2, "role": "Stage 1 with Aqua Sonic"},
+    {"instance_id": "df-002-feraligatr", "name": "Feraligatr δ", "count": 2, "role": "Battle Aura body for damage boost"},
+    {"instance_id": "df-005-milotic", "name": "Milotic δ", "count": 1, "role": "Sharing power for tech options"}
+  ],
+  "trainers": [
+    {"instance_id": "df-082-tv-reporter", "name": "TV Reporter", "count": 4, "role": "Draw support"},
+    {"instance_id": "df-079-prof-elms-training", "name": "Professor Elm's Training Method", "count": 3, "role": "Evolution search"}
+  ],
+  "energy": [
+    {"name": "Water Energy", "count": 12, "note": "Main energy"},
+    {"name": "Fire Energy", "count": 4, "note": "For Dragon Pump cost"}
+  ],
+  "unique_implementations": 12,
+  "notes": "Tests damage reduction bodies (Extra Smoke), attack damage that scales with energy (Aqua Pump), and global damage boost bodies (Battle Aura)."
+}

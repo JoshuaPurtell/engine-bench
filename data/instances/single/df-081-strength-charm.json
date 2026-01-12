@@ -1,0 +1,25 @@
+{
+  "id": "df-081-strength-charm",
+  "name": "Strength Charm - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_081_strength_charm.rs",
+  "cards": [
+    {
+      "id": "df-081",
+      "name": "Strength Charm",
+      "set": "DF",
+      "number": 81,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "tool",
+      "effect": "Attach Strength Charm to 1 of your Pok\u00e9mon that doesn't already have a Pok\u00e9mon Tool attached to it. If that Pok\u00e9mon is Knocked Out, discard this card. Whenever an attack from the Pok\u00e9mon that Strength Charm is attached to does damage to the Active Pok\u00e9mon, this attack does 10 more damage (before applying Weakness and Resistance). Discard Strength Charm at the end of the turn in which this Pok\u00e9mon attacks."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

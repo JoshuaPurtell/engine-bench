@@ -1,0 +1,25 @@
+{
+  "id": "df-076-island-hermit",
+  "name": "Island Hermit - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_076_island_hermit.rs",
+  "cards": [
+    {
+      "id": "df-076",
+      "name": "Island Hermit",
+      "set": "DF",
+      "number": 76,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pok\u00e9mon. When your turn ends, discard this card. Choose up to 2 of your Prize cards and put them face up. (These cards remain face up for the rest of the game.) Draw 2 cards."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

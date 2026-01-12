@@ -1,0 +1,23 @@
+{
+  "id": "hp-087-holon-lake",
+  "name": "Holon Lake - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_087_holon_lake.rs",
+  "cards": [
+    {
+      "id": "hp-087",
+      "name": "Holon Lake",
+      "set": "HP",
+      "number": 87,
+      "type": "trainer",
+      "trainer_kind": "stadium",
+      "text": "Each player's Pokemon that has δ on its card can use attacks on this card instead of their own. [C][C] Delta Draw: Count the number of Pokemon you have in play with δ on its card. Draw that many cards.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "provides_delta_draw_attack", "description": "Test that Holon Lake provides Delta Draw attack to delta Pokemon"},
+    {"name": "is_holon_stadium", "description": "Test that Holon Lake counts as Holon Stadium for Delta Reactor"}
+  ]
+}

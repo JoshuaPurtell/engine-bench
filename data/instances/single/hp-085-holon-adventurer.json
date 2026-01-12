@@ -1,0 +1,33 @@
+{
+  "id": "hp-085-holon-adventurer",
+  "name": "Holon Adventurer - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_085_holon_adventurer.rs",
+  "cards": [
+    {
+      "id": "hp-085",
+      "name": "Holon Adventurer",
+      "set": "HP",
+      "number": 85,
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "text": "Discard a card from your hand. If you can't discard a card from your hand, you can't play this card. Draw 3 cards. If you discarded a Pokémon that has δ on its card, draw 4 cards instead.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "draw_3_cards_normally",
+      "description": "Test that Holon Adventurer draws 3 cards when discarding non-delta card"
+    },
+    {
+      "name": "draw_4_cards_with_delta",
+      "description": "Test that Holon Adventurer draws 4 cards when discarding delta Pokemon"
+    },
+    {
+      "name": "requires_discard",
+      "description": "Test that Holon Adventurer cannot be played without a card to discard"
+    }
+  ]
+}

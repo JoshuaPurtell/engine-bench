@@ -1,0 +1,23 @@
+{
+  "id": "df-058-pupitar",
+  "name": "Pupitar - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_058_pupitar.rs",
+  "cards": [
+    {
+      "id": "df-058",
+      "name": "Pupitar",
+      "set": "DF",
+      "number": 58,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

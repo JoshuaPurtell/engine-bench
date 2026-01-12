@@ -1,0 +1,23 @@
+{
+  "id": "hp-086-holon-fossil",
+  "name": "Holon Fossil - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_086_holon_fossil.rs",
+  "cards": [
+    {
+      "id": "hp-086",
+      "name": "Holon Fossil",
+      "set": "HP",
+      "number": 86,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "text": "Flip a coin. If heads, search your deck for an Omanyte, Kabuto, Aerodactyl, Aerodactyl ex, Lileep, or Anorith and put it onto your Bench. Shuffle your deck afterward. If tails, put an Omanyte, Kabuto, Aerodactyl, Aerodactyl ex, Lileep, or Anorith from your hand onto your Bench. Treat the new Benched Pokémon as a Basic Pokémon.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "holon_fossil_heads_searches_deck", "description": "Test that heads result searches deck for fossil Pokemon"},
+    {"name": "holon_fossil_tails_plays_from_hand", "description": "Test that tails result plays fossil Pokemon from hand"}
+  ]
+}

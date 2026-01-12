@@ -1,0 +1,23 @@
+{
+  "id": "hp-089-professor-cozmos-discovery",
+  "name": "Professor Cozmo's Discovery - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_089_professor_cozmos_discovery.rs",
+  "cards": [
+    {
+      "id": "hp-089",
+      "name": "Professor Cozmo's Discovery",
+      "set": "HP",
+      "number": 89,
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "text": "Flip a coin. If heads, draw the bottom 3 cards of your deck. If tails, draw the top 2 cards of your deck.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "professor_cozmos_heads_draws_bottom", "description": "Test that heads draws 3 cards from bottom of deck"},
+    {"name": "professor_cozmos_tails_draws_top", "description": "Test that tails draws 2 cards from top of deck"}
+  ]
+}

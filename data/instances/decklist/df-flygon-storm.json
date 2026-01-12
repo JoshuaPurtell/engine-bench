@@ -1,0 +1,25 @@
+{
+  "id": "df-flygon-storm",
+  "name": "Flygon Delta Storm",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A Dragon Frontiers deck featuring Flygon ex δ's Sand Damage body for bench pressure and Psychic Pulse for spread damage. Uses Vibrava δ's Psychic Wing for mobility.",
+  "cards": [
+    {"instance_id": "df-068-trapinch", "name": "Trapinch δ", "count": 4, "role": "Basic for Flygon line, Sand Tomb tech"},
+    {"instance_id": "df-024-vibrava", "name": "Vibrava δ", "count": 3, "role": "Stage 1 with Psychic Wing body for free retreat"},
+    {"instance_id": "df-092-flygon-ex", "name": "Flygon ex δ", "count": 2, "role": "Main attacker with Sand Damage body"},
+    {"instance_id": "df-009-pinsir", "name": "Pinsir δ", "count": 3, "role": "Armor body tank for early game"},
+    {"instance_id": "df-003-heracross", "name": "Heracross δ", "count": 2, "role": "Shining Horn body, anti-Basic tech"}
+  ],
+  "trainers": [
+    {"instance_id": "df-082-tv-reporter", "name": "TV Reporter", "count": 4, "role": "Draw support"},
+    {"instance_id": "df-079-prof-elms-training", "name": "Professor Elm's Training Method", "count": 3, "role": "Evolution search"},
+    {"instance_id": "df-072-buffer-piece", "name": "Buffer Piece", "count": 2, "role": "Damage reduction"}
+  ],
+  "energy": [
+    {"name": "Psychic Energy", "count": 12, "note": "Main energy for Flygon line"},
+    {"name": "Delta Rainbow Energy", "count": 4, "note": "Flexible energy"}
+  ],
+  "unique_implementations": 11,
+  "notes": "Tests Poke-Bodies that trigger between turns (Sand Damage), retreat cost modification (Psychic Wing), and spread damage attacks."
+}

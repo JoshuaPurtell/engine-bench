@@ -1,0 +1,23 @@
+{
+  "id": "df-060-ralts",
+  "name": "Ralts - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_060_ralts.rs",
+  "cards": [
+    {
+      "id": "df-060",
+      "name": "Ralts",
+      "set": "DF",
+      "number": 60,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

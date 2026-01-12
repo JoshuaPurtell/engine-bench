@@ -1,0 +1,20 @@
+{
+  "id": "df-050-horsea",
+  "name": "Horsea Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_050_horsea.rs",
+  "cards": [{
+    "id": "df-050", "name": "Horsea δ", "set": "DF", "number": 50,
+    "type": "pokemon", "stage": "basic", "hp": 40,
+    "types": ["water"], "delta_species": true,
+    "weakness": { "type": "lightning", "modifier": "+10" },
+    "retreat_cost": 1,
+    "attacks": [
+      { "name": "Wave Splash", "cost": ["colorless"], "damage": 10, "text": "" },
+      { "name": "Aqua Pump", "cost": ["water"], "damage": 10, "text": "Does 10 damage plus 10 more damage for each Water Energy attached to Horsea but not used to pay for this attack." }
+    ],
+    "rarity": "common"
+  }],
+  "tests": [{ "name": "aqua_pump_scaling", "description": "Test Aqua Pump scales with extra Water Energy" }]
+}

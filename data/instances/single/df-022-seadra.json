@@ -1,0 +1,20 @@
+{
+  "id": "df-022-seadra",
+  "name": "Seadra Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_022_seadra.rs",
+  "cards": [{
+    "id": "df-022", "name": "Seadra δ", "set": "DF", "number": 22,
+    "type": "pokemon", "stage": "stage1", "evolves_from": "Horsea", "hp": 70,
+    "types": ["water"], "delta_species": true,
+    "weakness": { "type": "lightning", "modifier": "+20" },
+    "retreat_cost": 1,
+    "attacks": [
+      { "name": "Aqua Pump", "cost": ["water"], "damage": 20, "text": "Does 20 damage plus 10 more for each extra Water Energy." },
+      { "name": "Waterfall", "cost": ["water", "colorless", "colorless"], "damage": 40, "text": "" }
+    ],
+    "rarity": "uncommon"
+  }],
+  "tests": [{ "name": "aqua_pump_scaling", "description": "Test Aqua Pump scales with extra Water Energy" }]
+}

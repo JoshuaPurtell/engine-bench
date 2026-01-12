@@ -1,0 +1,27 @@
+{
+  "id": "hp-093-root-fossil",
+  "name": "Root Fossil - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_093_root_fossil.rs",
+  "cards": [
+    {
+      "id": "hp-093",
+      "name": "Root Fossil",
+      "set": "HP",
+      "number": 93,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "fossil": true,
+      "hp": 40,
+      "text": "Play Root Fossil as if it were a Basic Pokémon. While in play, Root Fossil counts as a Colorless Pokémon (as well as a Trainer card). Can't retreat or be affected by Special Conditions. If Knocked Out, doesn't count as a Knocked Out Pokémon.",
+      "abilities": [
+        {"name": "Spongy Stone", "type": "poke_body", "text": "At any times between turns, remove 1 damage counter from Root Fossil."}
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "spongy_stone_heals", "description": "Test that Spongy Stone removes damage counter between turns"}
+  ]
+}

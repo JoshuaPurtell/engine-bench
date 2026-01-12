@@ -1,0 +1,23 @@
+{
+  "id": "df-025-xatu",
+  "name": "Xatu \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_025_xatu.rs",
+  "cards": [
+    {
+      "id": "df-025",
+      "name": "Xatu \u03b4",
+      "set": "DF",
+      "number": 25,
+      "rarity": "rare",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

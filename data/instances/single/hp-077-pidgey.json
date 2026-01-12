@@ -1,0 +1,45 @@
+{
+  "id": "hp-077-pidgey",
+  "name": "Pidgey Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_077_pidgey.rs",
+  "cards": [
+    {
+      "id": "hp-077",
+      "name": "Pidgey δ",
+      "set": "HP",
+      "number": 77,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": ["lightning"],
+      "delta_species": true,
+      "weakness": {
+        "type": "lightning",
+        "modifier": "x2"
+      },
+      "resistance": {
+        "type": "fighting",
+        "modifier": "-30"
+      },
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Wing Attack",
+          "cost": ["colorless"],
+          "damage": 10,
+          "text": ""
+        }
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {
+      "name": "basic_attack",
+      "description": "Test that Wing Attack deals 10 damage"
+    }
+  ]
+}

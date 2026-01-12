@@ -1,0 +1,32 @@
+{
+  "id": "hp-084-trapinch",
+  "name": "Trapinch Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_084_trapinch.rs",
+  "cards": [
+    {
+      "id": "hp-084",
+      "name": "Trapinch δ",
+      "set": "HP",
+      "number": 84,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["grass"],
+      "delta_species": true,
+      "weakness": {"type": "grass", "modifier": "x2"},
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {"name": "Big Bite", "cost": ["grass"], "damage": 10, "text": "The Defending Pokémon can't retreat during your opponent's next turn."},
+        {"name": "Mud Slap", "cost": ["colorless", "colorless"], "damage": 20, "text": ""}
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "big_bite_prevents_retreat", "description": "Test that Big Bite prevents opponent from retreating"}
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "hp-058-aron",
+  "name": "Aron \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-058",
+      "name": "Aron \u03b4",
+      "set": "HP",
+      "number": 58,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": [
+        "fire"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "C"
+          ],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Metal Claw",
+          "cost": [
+            "R",
+            "C"
+          ],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "weakness": "water",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "ram_damage",
+      "expected": 10
+    },
+    {
+      "name": "metal_claw_damage",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_058_aron.rs"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "df-051-larvitar",
+  "name": "Larvitar - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_051_larvitar.rs",
+  "cards": [
+    {
+      "id": "df-051",
+      "name": "Larvitar",
+      "set": "DF",
+      "number": 51,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

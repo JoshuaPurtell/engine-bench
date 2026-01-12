@@ -1,0 +1,27 @@
+{
+  "id": "df-legendary-dragons",
+  "name": "Legendary Dragons Delta",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A Dragon Frontiers deck featuring the Legendary trio: Latias ex δ, Latios ex δ, and Rayquaza ex δ. Uses Fellow Boost for energy acceleration, Link Wing for mobility, and Rage Aura for comeback potential.",
+  "cards": [
+    {"instance_id": "df-095-latias-ex", "name": "Latias ex δ", "count": 2, "role": "Fellow Boost power for energy acceleration"},
+    {"instance_id": "df-096-latios-ex", "name": "Latios ex δ", "count": 2, "role": "Link Wing body for free Latias/Latios retreat"},
+    {"instance_id": "df-097-rayquaza-ex", "name": "Rayquaza ex δ", "count": 2, "role": "Rage Aura body for comeback damage"},
+    {"instance_id": "df-001-ampharos", "name": "Ampharos δ", "count": 1, "role": "Holon Veil + Delta Circle synergy"},
+    {"instance_id": "df-012-typhlosion", "name": "Typhlosion δ", "count": 1, "role": "Shady Move for damage manipulation"},
+    {"instance_id": "df-045-cyndaquil", "name": "Cyndaquil δ", "count": 2, "role": "Basic for Typhlosion"},
+    {"instance_id": "df-036-quilava", "name": "Quilava δ", "count": 1, "role": "Stage 1 for Typhlosion"}
+  ],
+  "trainers": [
+    {"instance_id": "df-082-tv-reporter", "name": "TV Reporter", "count": 4, "role": "Draw support"},
+    {"instance_id": "df-072-buffer-piece", "name": "Buffer Piece", "count": 3, "role": "Protect fragile ex Pokemon"}
+  ],
+  "energy": [
+    {"name": "Water Energy", "count": 6, "note": "For Latias/Latios"},
+    {"name": "Fire Energy", "count": 6, "note": "For Latias/Typhlosion"},
+    {"name": "Lightning Energy", "count": 6, "note": "For Latios/Rayquaza"}
+  ],
+  "unique_implementations": 12,
+  "notes": "Tests Poke-Powers that end turns (Fellow Boost), prize-based body effects (Rage Aura), conditional attack damage (Special Circuit vs ex), and heavy energy discard attacks."
+}

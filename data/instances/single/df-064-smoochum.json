@@ -1,0 +1,23 @@
+{
+  "id": "df-064-smoochum",
+  "name": "Smoochum \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_064_smoochum.rs",
+  "cards": [
+    {
+      "id": "df-064",
+      "name": "Smoochum \u03b4",
+      "set": "DF",
+      "number": 64,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

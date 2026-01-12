@@ -1,0 +1,59 @@
+{
+  "id": "hp-046-kabuto",
+  "name": "Kabuto \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-046",
+      "name": "Kabuto \u03b4",
+      "set": "HP",
+      "number": 46,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Mysterious Fossil",
+      "hp": 60,
+      "types": [
+        "fire",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Super Scratch",
+          "cost": [
+            "R"
+          ],
+          "damage": 20,
+          "text": ""
+        },
+        {
+          "name": "Granite Head",
+          "cost": [
+            "M",
+            "C"
+          ],
+          "damage": 20,
+          "text": "During your opponent's next turn, any damage done to Kabuto by attacks is reduced by 10 (after applying Weakness and Resistance)."
+        }
+      ],
+      "weakness": "grass",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "super_scratch_damage",
+      "expected": 20
+    },
+    {
+      "name": "granite_head_damage",
+      "expected": 20
+    },
+    {
+      "name": "granite_head_reduction",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_046_kabuto.rs"
+}

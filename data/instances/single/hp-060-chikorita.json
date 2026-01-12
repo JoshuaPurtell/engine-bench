@@ -1,0 +1,53 @@
+{
+  "id": "hp-060-chikorita",
+  "name": "Chikorita \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-060",
+      "name": "Chikorita \u03b4",
+      "set": "HP",
+      "number": 60,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "fire"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "R"
+          ],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Sleep Powder",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 10,
+          "text": "The Defending Pok\u00e9mon is now Asleep."
+        }
+      ],
+      "weakness": "water",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "razor_leaf_damage",
+      "expected": 10
+    },
+    {
+      "name": "sleep_powder_damage",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_060_chikorita.rs"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "df-068-trapinch",
+  "name": "Trapinch Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_068_trapinch.rs",
+  "cards": [
+    {
+      "id": "df-068",
+      "name": "Trapinch δ",
+      "set": "DF",
+      "number": 68,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["psychic"],
+      "delta_species": true,
+      "weakness": { "type": "grass", "modifier": "+10" },
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        { "name": "Bite", "cost": ["colorless"], "damage": 10, "text": "" },
+        { "name": "Sand Tomb", "cost": ["psychic", "colorless"], "damage": 20, "text": "The Defending Pokemon can't retreat during your opponent's next turn." }
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    { "name": "bite_base_damage", "description": "Test that Bite deals 10 damage" },
+    { "name": "sand_tomb_prevents_retreat", "description": "Test that Sand Tomb prevents retreat" }
+  ]
+}

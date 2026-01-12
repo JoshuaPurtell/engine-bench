@@ -1,0 +1,26 @@
+{
+  "id": "df-085-holon-energy-gl",
+  "name": "Holon Energy GL - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_085_holon_energy_gl.rs",
+  "cards": [
+    {
+      "id": "df-085",
+      "name": "Holon Energy GL",
+      "set": "DF",
+      "number": 85,
+      "rarity": "rare",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "Holon Energy GL provides Colorless Energy. If the Pok\u00e9mon that Holon Energy GL is attached to also has a basic Grass Energy card attached to it, that Pok\u00e9mon can't be affected by any Special Conditions. If the Pok\u00e9mon that Holon Energy GL is attached to also has a basic Lightning Energy card attached to it, damage done to that Pok\u00e9mon by attacks from your opponent's Pok\u00e9mon-ex is reduced by 10. Ignore these effects if Holon Energy GL is attached to Pok\u00e9mon-ex.",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

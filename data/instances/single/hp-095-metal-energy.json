@@ -1,0 +1,23 @@
+{
+  "id": "hp-095-metal-energy",
+  "name": "Metal Energy (Special) - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_095_metal_energy.rs",
+  "cards": [
+    {
+      "id": "hp-095",
+      "name": "Metal Energy",
+      "set": "HP",
+      "number": 95,
+      "type": "energy",
+      "energy_kind": "special",
+      "provides": ["metal"],
+      "text": "Damage done by attacks to the Pokémon that Metal Energy is attached to is reduced by 10 (after applying Weakness and Resistance). Ignore this effect if the Pokémon that Metal Energy is attached to isn't Metal.",
+      "rarity": "rare"
+    }
+  ],
+  "tests": [
+    {"name": "metal_energy_damage_reduction", "description": "Test that Metal Energy reduces damage by 10 for Metal Pokemon"}
+  ]
+}

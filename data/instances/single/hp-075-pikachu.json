@@ -1,0 +1,53 @@
+{
+  "id": "hp-075-pikachu",
+  "name": "Pikachu \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-075",
+      "name": "Pikachu \u03b4",
+      "set": "HP",
+      "number": 75,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": [
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "cost": [
+            "M"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Paralyzed."
+        },
+        {
+          "name": "Iron Tail",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 0,
+          "text": "Flip a coin until you get tails. This attack does 20 damage times the number of heads."
+        }
+      ],
+      "weakness": "fighting",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "thunder_wave_damage",
+      "expected": 10
+    },
+    {
+      "name": "iron_tail_per_heads",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_075_pikachu.rs"
+}

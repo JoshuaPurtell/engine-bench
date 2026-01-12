@@ -1,0 +1,23 @@
+{
+  "id": "df-037-seadra",
+  "name": "Seadra \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_037_seadra.rs",
+  "cards": [
+    {
+      "id": "df-037",
+      "name": "Seadra \u03b4",
+      "set": "DF",
+      "number": 37,
+      "rarity": "uncommon",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

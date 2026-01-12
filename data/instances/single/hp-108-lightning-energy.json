@@ -1,0 +1,20 @@
+{
+  "id": "hp-108-lightning-energy",
+  "name": "Lightning Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_108_lightning_energy.rs",
+  "cards": [
+    {
+      "id": "hp-108",
+      "name": "Lightning Energy",
+      "set": "HP",
+      "number": 108,
+      "type": "energy",
+      "energy_kind": "basic",
+      "provides": ["lightning"],
+      "rarity": "common"
+    }
+  ],
+  "tests": []
+}

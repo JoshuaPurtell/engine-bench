@@ -1,0 +1,25 @@
+{
+  "id": "df-074-holon-legacy",
+  "name": "Holon Legacy - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_074_holon_legacy.rs",
+  "cards": [
+    {
+      "id": "df-074",
+      "name": "Holon Legacy",
+      "set": "DF",
+      "number": 74,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "stadium",
+      "effect": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card. Each Pok\u00e9mon in play that has \u03b4 on its card (both yours and your opponent's) has no Weakness and can't use any Pok\u00e9-Powers."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

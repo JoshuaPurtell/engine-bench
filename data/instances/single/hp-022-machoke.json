@@ -1,0 +1,56 @@
+{
+  "id": "hp-022-machoke",
+  "name": "Machoke \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-022",
+      "name": "Machoke \u03b4",
+      "set": "HP",
+      "number": 22,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Machop",
+      "hp": 80,
+      "types": [
+        "psychic"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Low Kick",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 30,
+          "text": ""
+        },
+        {
+          "name": "Magnum Punch",
+          "cost": [
+            "P",
+            "C",
+            "C"
+          ],
+          "damage": 60,
+          "text": ""
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "low_kick_damage",
+      "expected": 30
+    },
+    {
+      "name": "magnum_punch_damage",
+      "expected": 60
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_022_machoke.rs"
+}

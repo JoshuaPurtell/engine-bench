@@ -1,0 +1,25 @@
+{
+  "id": "df-078-old-rod",
+  "name": "Old Rod - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_078_old_rod.rs",
+  "cards": [
+    {
+      "id": "df-078",
+      "name": "Old Rod",
+      "set": "DF",
+      "number": 78,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "item",
+      "effect": "Flip 2 coins. If both are heads, search your discard pile for a Basic Pok\u00e9mon or Evolution card, show it to your opponent, and put it into your hand. If both are tails, search your discard pile for a Trainer card, show it to your opponent, and put it into your hand."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

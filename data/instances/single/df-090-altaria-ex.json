@@ -1,0 +1,23 @@
+{
+  "id": "df-090-altaria-ex",
+  "name": "Altaria ex \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_090_altaria_ex.rs",
+  "cards": [
+    {
+      "id": "df-090",
+      "name": "Altaria ex \u03b4",
+      "set": "DF",
+      "number": 90,
+      "rarity": "rare_holo_ex",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

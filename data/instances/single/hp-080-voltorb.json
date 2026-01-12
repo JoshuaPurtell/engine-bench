@@ -1,0 +1,52 @@
+{
+  "id": "hp-080-voltorb",
+  "name": "Voltorb",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-080",
+      "name": "Voltorb",
+      "set": "HP",
+      "number": 80,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "lightning"
+      ],
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "cost": [
+            "L"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Paralyzed."
+        },
+        {
+          "name": "Swift",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 20,
+          "text": "This attack's damage isn't affected by Weakness, Resistance, Pok\u00e9-Powers, Pok\u00e9-Bodies, or any other effects on the Defending Pok\u00e9mon."
+        }
+      ],
+      "weakness": "fighting",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "thunder_wave_damage",
+      "expected": 10
+    },
+    {
+      "name": "swift_damage",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_080_voltorb.rs"
+}

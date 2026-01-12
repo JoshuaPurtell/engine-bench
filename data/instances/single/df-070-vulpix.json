@@ -1,0 +1,52 @@
+{
+  "id": "df-070-vulpix",
+  "name": "Vulpix Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_070_vulpix.rs",
+  "cards": [
+    {
+      "id": "df-070",
+      "name": "Vulpix δ",
+      "set": "DF",
+      "number": 70,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["fire", "psychic"],
+      "delta_species": true,
+      "weakness": {
+        "type": "water",
+        "modifier": "+10"
+      },
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": ["colorless"],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Confuse Ray",
+          "cost": ["psychic"],
+          "damage": 0,
+          "text": "Flip a coin. If heads, the Defending Pokemon is now Confused."
+        }
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {
+      "name": "scratch_base_damage",
+      "description": "Test that Scratch deals 10 damage"
+    },
+    {
+      "name": "confuse_ray_coin_flip",
+      "description": "Test that Confuse Ray applies Confused on heads"
+    }
+  ]
+}

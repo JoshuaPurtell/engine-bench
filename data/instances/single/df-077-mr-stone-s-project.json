@@ -1,0 +1,25 @@
+{
+  "id": "df-077-mr-stone-s-project",
+  "name": "Mr. Stone's Project - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_077_mr_stone_s_project.rs",
+  "cards": [
+    {
+      "id": "df-077",
+      "name": "Mr. Stone's Project",
+      "set": "DF",
+      "number": 77,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pok\u00e9mon. When your turn ends, discard this card. Search your deck for up to 2 basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward. Or, search your discard pile for up to 2 basic Energy cards, show them to your opponent, and put them into your hand."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

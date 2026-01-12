@@ -1,0 +1,26 @@
+{
+  "id": "df-089-scramble-energy",
+  "name": "Scramble Energy - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_089_scramble_energy.rs",
+  "cards": [
+    {
+      "id": "df-089",
+      "name": "Scramble Energy",
+      "set": "DF",
+      "number": 89,
+      "rarity": "uncommon",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "Scramble Energy can be attached only to an Evolved Pok\u00e9mon (excluding Pok\u00e9mon-ex). Scramble Energy provides Colorless Energy. While in play, if you have more Prize cards left than your opponent, Scramble Energy provides every type of Energy but provides only 3 in any combination at a time. If the Pok\u00e9mon Scramble Energy is attached to isn't an Evolved Pok\u00e9mon (or evolves into Pok\u00e9mon-ex), discard Scramble Energy.",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

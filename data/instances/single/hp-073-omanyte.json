@@ -1,0 +1,51 @@
+{
+  "id": "hp-073-omanyte",
+  "name": "Omanyte \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-073",
+      "name": "Omanyte \u03b4",
+      "set": "HP",
+      "number": 73,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Mysterious Fossil",
+      "hp": 60,
+      "types": [
+        "psychic",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Influence",
+          "cost": [
+            "P"
+          ],
+          "damage": 0,
+          "text": "Search your deck for a Helix Fossil, Dome Fossil, Claw Fossil, Root Fossil, or Mysterious Fossil and put it onto your Bench. Shuffle your deck afterward."
+        },
+        {
+          "name": "Wave Splash",
+          "cost": [
+            "M",
+            "C"
+          ],
+          "damage": 30,
+          "text": ""
+        }
+      ],
+      "weakness": "lightning",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "wave_splash_damage",
+      "expected": 30
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_073_omanyte.rs"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "df-101-mew-star",
+  "name": "Mew \u2605 \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_101_mew_star.rs",
+  "cards": [
+    {
+      "id": "df-101",
+      "name": "Mew \u2605 \u03b4",
+      "set": "DF",
+      "number": 101,
+      "rarity": "rare_holo_star",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

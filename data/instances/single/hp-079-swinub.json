@@ -1,0 +1,54 @@
+{
+  "id": "hp-079-swinub",
+  "name": "Swinub \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-079",
+      "name": "Swinub \u03b4",
+      "set": "HP",
+      "number": 79,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "fire",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Freezing Breath",
+          "cost": [
+            "C"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Paralyzed."
+        },
+        {
+          "name": "Flail",
+          "cost": [
+            "R",
+            "M"
+          ],
+          "damage": 0,
+          "text": "Does 10 damage times the number of damage counters on Swinub."
+        }
+      ],
+      "weakness": "water",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "freezing_breath_damage",
+      "expected": 10
+    },
+    {
+      "name": "flail_per_counter",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_079_swinub.rs"
+}

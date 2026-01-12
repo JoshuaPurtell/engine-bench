@@ -1,0 +1,25 @@
+{
+  "id": "df-083-switch",
+  "name": "Switch - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_083_switch.rs",
+  "cards": [
+    {
+      "id": "df-083",
+      "name": "Switch",
+      "set": "DF",
+      "number": 83,
+      "rarity": "common",
+      "type": "trainer",
+      "trainer_kind": "item",
+      "effect": "Switch 1 of your Active Pok\u00e9mon with 1 of your Benched Pok\u00e9mon."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

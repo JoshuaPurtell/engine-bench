@@ -1,0 +1,23 @@
+{
+  "id": "df-047-ekans",
+  "name": "Ekans \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_047_ekans.rs",
+  "cards": [
+    {
+      "id": "df-047",
+      "name": "Ekans \u03b4",
+      "set": "DF",
+      "number": 47,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

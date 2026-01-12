@@ -1,0 +1,49 @@
+{
+  "id": "hp-064-grimer",
+  "name": "Grimer \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-064",
+      "name": "Grimer \u03b4",
+      "set": "HP",
+      "number": 64,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "grass"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Poison Gas",
+          "cost": [
+            "G"
+          ],
+          "damage": 0,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Poisoned."
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "tackle_damage",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_064_grimer.rs"
+}

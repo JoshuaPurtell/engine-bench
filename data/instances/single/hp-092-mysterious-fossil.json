@@ -1,0 +1,24 @@
+{
+  "id": "hp-092-mysterious-fossil",
+  "name": "Mysterious Fossil - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_092_mysterious_fossil.rs",
+  "cards": [
+    {
+      "id": "hp-092",
+      "name": "Mysterious Fossil",
+      "set": "HP",
+      "number": 92,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "fossil": true,
+      "hp": 50,
+      "text": "Play Mysterious Fossil as if it were a Basic Pokémon. While in play, Mysterious Fossil counts as a Colorless Pokémon (as well as a Trainer card). Can't retreat or be affected by Special Conditions. If Knocked Out, doesn't count as a Knocked Out Pokémon.",
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "mysterious_fossil_basic_pokemon", "description": "Test that Mysterious Fossil can be played as Basic Pokemon"}
+  ]
+}

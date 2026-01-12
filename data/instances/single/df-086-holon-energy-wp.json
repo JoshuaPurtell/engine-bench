@@ -1,0 +1,26 @@
+{
+  "id": "df-086-holon-energy-wp",
+  "name": "Holon Energy WP - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_086_holon_energy_wp.rs",
+  "cards": [
+    {
+      "id": "df-086",
+      "name": "Holon Energy WP",
+      "set": "DF",
+      "number": 86,
+      "rarity": "rare",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "Holon Energy WP provides Colorless Energy. If the Pok\u00e9mon that Holon Energy WP is attached to also has a basic Water Energy card attached to it, prevent all effects of attacks, excluding damage, done to that Pok\u00e9mon by your opponent's Pok\u00e9mon. If the Pok\u00e9mon that Holon Energy WP is attached to also has a basic Psychic Energy card attached to it, that Pok\u00e9mon's Retreat Cost is 0. Ignore these effects if Holon Energy WP is attached to Pok\u00e9mon-ex.",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

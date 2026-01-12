@@ -1,0 +1,20 @@
+{
+  "id": "hp-105-grass-energy",
+  "name": "Grass Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_105_grass_energy.rs",
+  "cards": [
+    {
+      "id": "hp-105",
+      "name": "Grass Energy",
+      "set": "HP",
+      "number": 105,
+      "type": "energy",
+      "energy_kind": "basic",
+      "provides": ["grass"],
+      "rarity": "common"
+    }
+  ],
+  "tests": []
+}

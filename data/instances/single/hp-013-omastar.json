@@ -1,0 +1,34 @@
+{
+  "id": "hp-013-omastar",
+  "name": "Omastar Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_013_omastar.rs",
+  "cards": [
+    {
+      "id": "hp-013",
+      "name": "Omastar δ",
+      "set": "HP",
+      "number": 13,
+      "type": "pokemon",
+      "stage": "stage2",
+      "evolves_from": "Omanyte",
+      "hp": 110,
+      "types": ["psychic"],
+      "delta_species": true,
+      "weakness": {"type": "grass", "modifier": "x2"},
+      "resistance": null,
+      "retreat_cost": 2,
+      "abilities": [],
+      "attacks": [
+        {"name": "Bind", "cost": ["psychic", "colorless"], "damage": 30, "text": "Flip a coin. If heads, the Defending Pokemon is now Paralyzed."},
+        {"name": "Vengeful Spikes", "cost": ["psychic", "colorless", "colorless"], "damage": "30+", "text": "Does 30 damage plus 10 more damage for each Omanyte, Omastar, Omastar δ, and Omanyte δ in your discard pile."}
+      ],
+      "rarity": "rare"
+    }
+  ],
+  "tests": [
+    {"name": "bind_paralyzes_on_heads", "description": "Test that Bind paralyzes on heads"},
+    {"name": "vengeful_spikes_scales", "description": "Test that Vengeful Spikes adds +10 per Omanyte/Omastar in discard"}
+  ]
+}

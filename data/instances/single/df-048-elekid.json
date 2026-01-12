@@ -1,0 +1,23 @@
+{
+  "id": "df-048-elekid",
+  "name": "Elekid \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_048_elekid.rs",
+  "cards": [
+    {
+      "id": "df-048",
+      "name": "Elekid \u03b4",
+      "set": "DF",
+      "number": 48,
+      "rarity": "common",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

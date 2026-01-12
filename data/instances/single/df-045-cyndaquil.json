@@ -1,0 +1,52 @@
+{
+  "id": "df-045-cyndaquil",
+  "name": "Cyndaquil Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_045_cyndaquil.rs",
+  "cards": [
+    {
+      "id": "df-045",
+      "name": "Cyndaquil δ",
+      "set": "DF",
+      "number": 45,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["fire"],
+      "delta_species": true,
+      "weakness": {
+        "type": "water",
+        "modifier": "+10"
+      },
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "cost": ["colorless"],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Flare",
+          "cost": ["fire"],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {
+      "name": "gnaw_base_damage",
+      "description": "Test that Gnaw deals 10 damage"
+    },
+    {
+      "name": "flare_base_damage",
+      "description": "Test that Flare deals 20 damage"
+    }
+  ]
+}

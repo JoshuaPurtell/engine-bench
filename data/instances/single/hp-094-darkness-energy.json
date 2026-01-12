@@ -1,0 +1,23 @@
+{
+  "id": "hp-094-darkness-energy",
+  "name": "Darkness Energy (Special) - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_094_darkness_energy.rs",
+  "cards": [
+    {
+      "id": "hp-094",
+      "name": "Darkness Energy",
+      "set": "HP",
+      "number": 94,
+      "type": "energy",
+      "energy_kind": "special",
+      "provides": ["darkness"],
+      "text": "If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon (before applying Weakness and Resistance). Ignore this effect unless the Attacking Pokémon is Darkness or has Dark in its name.",
+      "rarity": "rare"
+    }
+  ],
+  "tests": [
+    {"name": "darkness_energy_bonus_damage", "description": "Test that Darkness Energy adds 10 damage for Darkness Pokemon"}
+  ]
+}

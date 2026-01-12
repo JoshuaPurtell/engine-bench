@@ -1,0 +1,52 @@
+{
+  "id": "hp-047-lairon",
+  "name": "Lairon \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-047",
+      "name": "Lairon \u03b4",
+      "set": "HP",
+      "number": 47,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Aron",
+      "hp": 80,
+      "types": [
+        "fire",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Delta Search",
+          "cost": [
+            "C"
+          ],
+          "damage": 0,
+          "text": "Search your deck for a Holon Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+        },
+        {
+          "name": "Metal Claw",
+          "cost": [
+            "R",
+            "M",
+            "C"
+          ],
+          "damage": 50,
+          "text": ""
+        }
+      ],
+      "weakness": "water",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "metal_claw_damage",
+      "expected": 50
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_047_lairon.rs"
+}

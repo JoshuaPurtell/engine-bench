@@ -1,0 +1,23 @@
+{
+  "id": "df-011-togetic",
+  "name": "Togetic \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_011_togetic.rs",
+  "cards": [
+    {
+      "id": "df-011",
+      "name": "Togetic \u03b4",
+      "set": "DF",
+      "number": 11,
+      "rarity": "rare_holo",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

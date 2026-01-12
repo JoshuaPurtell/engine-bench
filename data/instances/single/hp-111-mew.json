@@ -1,0 +1,31 @@
+{
+  "id": "hp-111-mew",
+  "name": "Mew (Secret) - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_111_mew.rs",
+  "cards": [
+    {
+      "id": "hp-111",
+      "name": "Mew",
+      "set": "HP",
+      "number": 111,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["psychic"],
+      "secret_rare": true,
+      "weakness": {"type": "psychic", "modifier": "x2"},
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {"name": "Super Psywave", "cost": ["psychic", "colorless"], "damage": 0, "text": "Choose 1 of your opponent's Pokémon. Count the amount of Energy attached to that Pokémon. Put that many damage counters on the Pokémon."}
+      ],
+      "rarity": "rare_secret"
+    }
+  ],
+  "tests": [
+    {"name": "super_psywave_damage_counters", "description": "Test that Super Psywave deals damage counters equal to target's attached energy"}
+  ]
+}

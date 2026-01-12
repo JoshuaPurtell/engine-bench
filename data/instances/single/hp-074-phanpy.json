@@ -1,0 +1,52 @@
+{
+  "id": "hp-074-phanpy",
+  "name": "Phanpy",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-074",
+      "name": "Phanpy",
+      "set": "HP",
+      "number": 74,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "fighting"
+      ],
+      "attacks": [
+        {
+          "name": "Flail",
+          "cost": [
+            "C"
+          ],
+          "damage": 0,
+          "text": "Does 10 damage times the number of damage counters on Phanpy."
+        },
+        {
+          "name": "Mud Slap",
+          "cost": [
+            "F",
+            "C"
+          ],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "weakness": "grass",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "flail_per_counter",
+      "expected": 10
+    },
+    {
+      "name": "mud_slap_damage",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_074_phanpy.rs"
+}

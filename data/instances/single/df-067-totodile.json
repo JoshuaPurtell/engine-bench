@@ -1,0 +1,52 @@
+{
+  "id": "df-067-totodile",
+  "name": "Totodile Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_067_totodile.rs",
+  "cards": [
+    {
+      "id": "df-067",
+      "name": "Totodile δ",
+      "set": "DF",
+      "number": 67,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["water"],
+      "delta_species": true,
+      "weakness": {
+        "type": "lightning",
+        "modifier": "+10"
+      },
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": ["colorless"],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Wave Splash",
+          "cost": ["water", "colorless"],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {
+      "name": "bite_base_damage",
+      "description": "Test that Bite deals 10 damage"
+    },
+    {
+      "name": "wave_splash_base_damage",
+      "description": "Test that Wave Splash deals 20 damage"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "hp-082-surskit",
+  "name": "Surskit - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_082_surskit.rs",
+  "cards": [
+    {
+      "id": "hp-082",
+      "name": "Surskit",
+      "set": "HP",
+      "number": 82,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": ["grass"],
+      "weakness": {"type": "fire", "modifier": "x2"},
+      "resistance": null,
+      "retreat_cost": 1,
+      "abilities": [],
+      "attacks": [
+        {"name": "Super Hypno Wave", "cost": ["colorless"], "damage": 10, "text": "The Defending Pokémon is now Asleep."}
+      ],
+      "rarity": "common"
+    }
+  ],
+  "tests": [
+    {"name": "super_hypno_wave_sleeps", "description": "Test that Super Hypno Wave inflicts Asleep status"}
+  ]
+}

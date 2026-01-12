@@ -1,0 +1,23 @@
+{
+  "id": "df-006-nidoking",
+  "name": "Nidoking \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_006_nidoking.rs",
+  "cards": [
+    {
+      "id": "df-006",
+      "name": "Nidoking \u03b4",
+      "set": "DF",
+      "number": 6,
+      "rarity": "rare_holo",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

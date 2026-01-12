@@ -1,0 +1,24 @@
+{
+  "id": "hp-081-mysterious-fossil",
+  "name": "Mysterious Fossil",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-081",
+      "name": "Mysterious Fossil",
+      "set": "HP",
+      "number": 81,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "text": "Play Mysterious Fossil as if it were a Basic Pok\u00e9mon. (Mysterious Fossil counts as a Trainer card as well.) Mysterious Fossil has no attacks of its own, can't retreat, and has 50 HP. At any time during your turn before your attack, you may discard Mysterious Fossil from play."
+    }
+  ],
+  "tests": [
+    {
+      "name": "hp",
+      "expected": 50
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_081_mysterious_fossil.rs"
+}

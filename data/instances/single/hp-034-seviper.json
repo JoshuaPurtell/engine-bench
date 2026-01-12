@@ -1,0 +1,57 @@
+{
+  "id": "hp-034-seviper",
+  "name": "Seviper \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-034",
+      "name": "Seviper \u03b4",
+      "set": "HP",
+      "number": 34,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 70,
+      "types": [
+        "fire"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Poison Tail",
+          "cost": [
+            "R"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Poisoned."
+        },
+        {
+          "name": "Toxic",
+          "cost": [
+            "R",
+            "C"
+          ],
+          "damage": 20,
+          "text": "The Defending Pok\u00e9mon is now Poisoned. Put 2 damage counters instead of 1 on the Defending Pok\u00e9mon between turns."
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "poison_tail_damage",
+      "expected": 10
+    },
+    {
+      "name": "toxic_damage",
+      "expected": 20
+    },
+    {
+      "name": "toxic_poison_counters",
+      "expected": 2
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_034_seviper.rs"
+}

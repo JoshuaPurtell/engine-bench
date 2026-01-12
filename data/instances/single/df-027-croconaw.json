@@ -1,0 +1,53 @@
+{
+  "id": "df-027-croconaw",
+  "name": "Croconaw Delta - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_027_croconaw.rs",
+  "cards": [
+    {
+      "id": "df-027",
+      "name": "Croconaw δ",
+      "set": "DF",
+      "number": 27,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Totodile",
+      "hp": 80,
+      "types": ["water"],
+      "delta_species": true,
+      "weakness": {
+        "type": "lightning",
+        "modifier": "+20"
+      },
+      "resistance": null,
+      "retreat_cost": 2,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": ["colorless", "colorless"],
+          "damage": 30,
+          "text": ""
+        },
+        {
+          "name": "Aqua Sonic",
+          "cost": ["water", "water", "colorless"],
+          "damage": 50,
+          "text": "This attack's damage isn't affected by Resistance."
+        }
+      ],
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "bite_base_damage",
+      "description": "Test that Bite deals 30 damage"
+    },
+    {
+      "name": "aqua_sonic_ignores_resistance",
+      "description": "Test that Aqua Sonic ignores Resistance"
+    }
+  ]
+}

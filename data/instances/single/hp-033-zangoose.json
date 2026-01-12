@@ -1,0 +1,53 @@
+{
+  "id": "hp-033-zangoose",
+  "name": "Zangoose \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-033",
+      "name": "Zangoose \u03b4",
+      "set": "HP",
+      "number": 33,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 70,
+      "types": [
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Swords Dance",
+          "cost": [
+            "C"
+          ],
+          "damage": 0,
+          "text": "During your next turn, Zangoose's Crushing Claws attack's base damage is 60 instead of 30."
+        },
+        {
+          "name": "Crushing Claws",
+          "cost": [
+            "M",
+            "C"
+          ],
+          "damage": 30,
+          "text": ""
+        }
+      ],
+      "weakness": "fighting",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "crushing_claws_base",
+      "expected": 30
+    },
+    {
+      "name": "crushing_claws_boosted",
+      "expected": 60
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_033_zangoose.rs"
+}

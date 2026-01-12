@@ -1,0 +1,26 @@
+{
+  "id": "df-084-holon-energy-ff",
+  "name": "Holon Energy FF - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_084_holon_energy_ff.rs",
+  "cards": [
+    {
+      "id": "df-084",
+      "name": "Holon Energy FF",
+      "set": "DF",
+      "number": 84,
+      "rarity": "rare",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "Holon Energy FF provides Colorless Energy. If the Pok\u00e9mon that Holon Energy FF is attached to also has a basic Fire Energy card attached to it, that Pok\u00e9mon has no Weakness. If the Pok\u00e9mon that Holon Energy FF is attached to also has a basic Fighting Energy card attached to it, damage done by that Pok\u00e9mon's attack isn't affected by Resistance. Ignore these effects if Holon Energy FF is attached to Pok\u00e9mon-ex.",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

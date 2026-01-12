@@ -1,0 +1,53 @@
+{
+  "id": "hp-069-mankey",
+  "name": "Mankey \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-069",
+      "name": "Mankey \u03b4",
+      "set": "HP",
+      "number": 69,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": [
+        "fire"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Scratch",
+          "cost": [
+            "R"
+          ],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Low Kick",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 20,
+          "text": ""
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "scratch_damage",
+      "expected": 10
+    },
+    {
+      "name": "low_kick_damage",
+      "expected": 20
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_069_mankey.rs"
+}

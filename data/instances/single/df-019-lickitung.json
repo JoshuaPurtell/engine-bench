@@ -1,0 +1,23 @@
+{
+  "id": "df-019-lickitung",
+  "name": "Lickitung \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_019_lickitung.rs",
+  "cards": [
+    {
+      "id": "df-019",
+      "name": "Lickitung \u03b4",
+      "set": "DF",
+      "number": 19,
+      "rarity": "rare",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

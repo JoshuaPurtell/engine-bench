@@ -1,0 +1,27 @@
+{
+  "id": "df-gardevoir-control",
+  "name": "Gardevoir Delta Control",
+  "mode": "decklist",
+  "expansion": "dragon_frontiers",
+  "description": "A Psychic control deck featuring Gardevoir ex δ's Imprison power to lock opponent's abilities. Uses Jynx δ for retreat control and Ninetales δ for healing and cycling.",
+  "cards": [
+    {"instance_id": "df-061-ralts", "name": "Ralts δ", "count": 4, "role": "Basic for Gardevoir line, Psychic Boom scaling"},
+    {"instance_id": "df-033-kirlia", "name": "Kirlia δ", "count": 3, "role": "Stage 1 with Mind Shock (ignores W/R)"},
+    {"instance_id": "df-093-gardevoir-ex", "name": "Gardevoir ex δ", "count": 2, "role": "Main attacker with Imprison power"},
+    {"instance_id": "df-017-jynx", "name": "Jynx δ", "count": 2, "role": "Stages of Evolution body for free retreat"},
+    {"instance_id": "df-070-vulpix", "name": "Vulpix δ", "count": 3, "role": "Basic for Ninetales line"},
+    {"instance_id": "df-008-ninetales", "name": "Ninetales δ", "count": 2, "role": "Volunteer power for healing/cycling"},
+    {"instance_id": "df-010-snorlax", "name": "Snorlax δ", "count": 2, "role": "Dozing heal + Bedhead sleep lock"}
+  ],
+  "trainers": [
+    {"instance_id": "df-082-tv-reporter", "name": "TV Reporter", "count": 4, "role": "Draw support"},
+    {"instance_id": "df-079-prof-elms-training", "name": "Professor Elm's Training Method", "count": 4, "role": "Evolution search"},
+    {"instance_id": "df-072-buffer-piece", "name": "Buffer Piece", "count": 2, "role": "Damage reduction"}
+  ],
+  "energy": [
+    {"name": "Psychic Energy", "count": 10, "note": "Main energy"},
+    {"name": "Fire Energy", "count": 6, "note": "For Gardevoir and Jynx"}
+  ],
+  "unique_implementations": 13,
+  "notes": "Tests Poke-Powers that place markers (Imprison), attacks that ignore Weakness/Resistance (Mind Shock), and complex energy movement (Flame Ball)."
+}

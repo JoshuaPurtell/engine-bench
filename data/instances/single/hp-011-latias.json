@@ -1,0 +1,69 @@
+{
+  "id": "hp-011-latias",
+  "name": "Latias Delta - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_011_latias.rs",
+  "cards": [
+    {
+      "id": "hp-011",
+      "name": "Latias δ",
+      "set": "HP",
+      "number": 11,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 70,
+      "types": ["fire"],
+      "delta_species": true,
+      "weakness": {
+        "type": "colorless",
+        "modifier": "x2"
+      },
+      "resistance": [
+        {"type": "psychic", "modifier": "-30"},
+        {"type": "fighting", "modifier": "-30"}
+      ],
+      "retreat_cost": 1,
+      "abilities": [
+        {
+          "name": "Dual Aura",
+          "type": "poke_body",
+          "text": "As long as you have Latios or Latios ex in play, each player's Evolved Pokémon (excluding Pokémon-ex) can't use any Poké-Bodies."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Spearhead",
+          "cost": ["colorless"],
+          "damage": 0,
+          "text": "Draw a card."
+        },
+        {
+          "name": "Dragon Claw",
+          "cost": ["fire", "colorless", "colorless"],
+          "damage": 40,
+          "text": ""
+        }
+      ],
+      "rarity": "holo_rare"
+    }
+  ],
+  "tests": [
+    {
+      "name": "dual_aura_blocks_evolved_bodies",
+      "description": "Test that Dual Aura blocks Poke-Bodies of evolved non-ex Pokemon"
+    },
+    {
+      "name": "dual_aura_requires_latios",
+      "description": "Test that Dual Aura requires Latios or Latios ex in play"
+    },
+    {
+      "name": "dual_aura_allows_ex_bodies",
+      "description": "Test that Dual Aura does not block Pokemon-ex Poke-Bodies"
+    },
+    {
+      "name": "spearhead_draws_card",
+      "description": "Test that Spearhead draws a card"
+    }
+  ]
+}

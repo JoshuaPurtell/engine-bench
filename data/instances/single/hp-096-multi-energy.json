@@ -1,0 +1,24 @@
+{
+  "id": "hp-096-multi-energy",
+  "name": "Multi Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_096_multi_energy.rs",
+  "cards": [
+    {
+      "id": "hp-096",
+      "name": "Multi Energy",
+      "set": "HP",
+      "number": 96,
+      "type": "energy",
+      "energy_kind": "special",
+      "provides": ["all"],
+      "text": "While in play, Multi Energy provides every type of Energy but provides only 1 Energy at a time. Multi Energy provides Colorless Energy when attached to a Pokémon that already has Special Energy cards attached to it.",
+      "rarity": "rare"
+    }
+  ],
+  "tests": [
+    {"name": "multi_energy_provides_all_types", "description": "Test that Multi Energy provides all types"},
+    {"name": "multi_energy_colorless_with_special", "description": "Test that Multi Energy provides Colorless if other special energy attached"}
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "hp-078-spinarak",
+  "name": "Spinarak \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-078",
+      "name": "Spinarak \u03b4",
+      "set": "HP",
+      "number": 78,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 40,
+      "types": [
+        "darkness",
+        "metal"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Hang Down",
+          "cost": [
+            "C"
+          ],
+          "damage": 10,
+          "text": ""
+        },
+        {
+          "name": "Poison Thread",
+          "cost": [
+            "D",
+            "M"
+          ],
+          "damage": 10,
+          "text": "The Defending Pok\u00e9mon is now Poisoned."
+        }
+      ],
+      "weakness": "fire",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "hang_down_damage",
+      "expected": 10
+    },
+    {
+      "name": "poison_thread_damage",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_078_spinarak.rs"
+}

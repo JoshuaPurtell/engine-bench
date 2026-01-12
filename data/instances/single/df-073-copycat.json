@@ -1,0 +1,25 @@
+{
+  "id": "df-073-copycat",
+  "name": "Copycat - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_073_copycat.rs",
+  "cards": [
+    {
+      "id": "df-073",
+      "name": "Copycat",
+      "set": "DF",
+      "number": 73,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pok\u00e9mon. When your turn ends, discard this card. Shuffle your hand into your deck. Then, count the number of cards in your opponent's hand and draw that many cards."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

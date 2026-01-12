@@ -1,0 +1,20 @@
+{
+  "id": "hp-109-psychic-energy",
+  "name": "Psychic Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_109_psychic_energy.rs",
+  "cards": [
+    {
+      "id": "hp-109",
+      "name": "Psychic Energy",
+      "set": "HP",
+      "number": 109,
+      "type": "energy",
+      "energy_kind": "basic",
+      "provides": ["psychic"],
+      "rarity": "common"
+    }
+  ],
+  "tests": []
+}

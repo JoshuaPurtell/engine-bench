@@ -1,0 +1,25 @@
+{
+  "id": "df-080-professor-oak-s-research",
+  "name": "Professor Oak's Research - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_080_professor_oak_s_research.rs",
+  "cards": [
+    {
+      "id": "df-080",
+      "name": "Professor Oak's Research",
+      "set": "DF",
+      "number": 80,
+      "rarity": "uncommon",
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "You can play only one Supporter card each turn. When you play this card, put it next to your Active Pok\u00e9mon. When your turn ends, discard this card. Shuffle your hand into your deck, then draw 5 cards."
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

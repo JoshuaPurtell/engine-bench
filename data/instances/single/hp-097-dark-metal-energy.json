@@ -1,0 +1,23 @@
+{
+  "id": "hp-097-dark-metal-energy",
+  "name": "Dark Metal Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_097_dark_metal_energy.rs",
+  "cards": [
+    {
+      "id": "hp-097",
+      "name": "Dark Metal Energy",
+      "set": "HP",
+      "number": 97,
+      "type": "energy",
+      "energy_kind": "special",
+      "provides": ["darkness", "metal"],
+      "text": "While in play, Dark Metal Energy provides Darkness Energy and Metal Energy, but provides only 1 Energy at a time.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "dark_metal_energy_provides_both", "description": "Test that Dark Metal Energy provides both Darkness and Metal"}
+  ]
+}

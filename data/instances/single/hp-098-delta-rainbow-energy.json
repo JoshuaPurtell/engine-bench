@@ -1,0 +1,24 @@
+{
+  "id": "hp-098-delta-rainbow-energy",
+  "name": "Delta Rainbow Energy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_098_delta_rainbow_energy.rs",
+  "cards": [
+    {
+      "id": "hp-098",
+      "name": "δ Rainbow Energy",
+      "set": "HP",
+      "number": 98,
+      "type": "energy",
+      "energy_kind": "special",
+      "provides": ["colorless"],
+      "text": "δ Rainbow Energy provides Colorless Energy. While attached to a Pokémon that has δ on its card, δ Rainbow Energy provides every type of Energy but provides only 1 Energy at a time.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "delta_rainbow_colorless_normally", "description": "Test that δ Rainbow Energy provides Colorless normally"},
+    {"name": "delta_rainbow_all_types_for_delta", "description": "Test that δ Rainbow Energy provides all types for δ Pokemon"}
+  ]
+}

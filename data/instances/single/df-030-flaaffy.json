@@ -1,0 +1,23 @@
+{
+  "id": "df-030-flaaffy",
+  "name": "Flaaffy \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_030_flaaffy.rs",
+  "cards": [
+    {
+      "id": "df-030",
+      "name": "Flaaffy \u03b4",
+      "set": "DF",
+      "number": 30,
+      "rarity": "uncommon",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

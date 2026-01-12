@@ -1,0 +1,23 @@
+{
+  "id": "hp-090-rare-candy",
+  "name": "Rare Candy - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "card_file": "tcg_expansions/src/hp/cards/hp_090_rare_candy.rs",
+  "cards": [
+    {
+      "id": "hp-090",
+      "name": "Rare Candy",
+      "set": "HP",
+      "number": 90,
+      "type": "trainer",
+      "trainer_kind": "item",
+      "text": "Choose 1 of your Basic Pokemon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokemon in your hand, put that card on the Basic Pokemon. (This counts as evolving that Pokemon.)",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {"name": "evolves_basic_to_stage2", "description": "Test that Rare Candy can evolve Basic directly to Stage 2"},
+    {"name": "evolves_basic_to_stage1", "description": "Test that Rare Candy can evolve Basic to Stage 1"}
+  ]
+}

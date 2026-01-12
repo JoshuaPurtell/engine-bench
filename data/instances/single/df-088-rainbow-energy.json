@@ -1,0 +1,26 @@
+{
+  "id": "df-088-rainbow-energy",
+  "name": "\u03b4 Rainbow Energy - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_088_rainbow_energy.rs",
+  "cards": [
+    {
+      "id": "df-088",
+      "name": "\u03b4 Rainbow Energy",
+      "set": "DF",
+      "number": 88,
+      "rarity": "uncommon",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "\u03b4 Rainbow Energy provides Colorless Energy. While attached to a Pok\u00e9mon that has \u03b4 on its card, \u03b4 Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. (Has no effect other than providing Energy.)",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

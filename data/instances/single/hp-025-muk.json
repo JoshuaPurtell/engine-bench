@@ -1,0 +1,54 @@
+{
+  "id": "hp-025-muk",
+  "name": "Muk \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-025",
+      "name": "Muk \u03b4",
+      "set": "HP",
+      "number": 25,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Grimer",
+      "hp": 80,
+      "types": [
+        "grass"
+      ],
+      "delta_species": true,
+      "abilities": [
+        {
+          "name": "Toxic Sludge",
+          "type": "poke_body",
+          "text": "As long as Muk is your Active Pok\u00e9mon, put 1 damage counter on each Active Pok\u00e9mon (both yours and your opponent's) between turns."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slimy Water",
+          "cost": [
+            "G",
+            "C",
+            "C"
+          ],
+          "damage": 50,
+          "text": ""
+        }
+      ],
+      "weakness": "psychic",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "toxic_sludge_counters",
+      "expected": 1
+    },
+    {
+      "name": "slimy_water_damage",
+      "expected": 50
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_025_muk.rs"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "df-079-prof-elms-training",
+  "name": "Professor Elm's Training Method - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_079_prof_elms_training.rs",
+  "cards": [
+    {
+      "id": "df-079",
+      "name": "Professor Elm's Training Method",
+      "set": "DF",
+      "number": 79,
+      "type": "trainer",
+      "trainer_kind": "supporter",
+      "effect": "Search your deck for an Evolution card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",
+      "rarity": "uncommon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "searches_for_evolution",
+      "description": "Test that Prof Elm's searches for an Evolution card"
+    },
+    {
+      "name": "only_finds_evolutions",
+      "description": "Test that Prof Elm's cannot find Basic Pokemon"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "hp-020-camerupt",
+  "name": "Camerupt",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-020",
+      "name": "Camerupt",
+      "set": "HP",
+      "number": 20,
+      "type": "pokemon",
+      "stage": "stage1",
+      "evolves_from": "Numel",
+      "hp": 80,
+      "types": [
+        "fire"
+      ],
+      "attacks": [
+        {
+          "name": "Combustion",
+          "cost": [
+            "R",
+            "C"
+          ],
+          "damage": 30,
+          "text": ""
+        },
+        {
+          "name": "Split Bomb",
+          "cost": [
+            "R",
+            "R",
+            "C"
+          ],
+          "damage": 0,
+          "text": "Choose 2 of your opponent's Pok\u00e9mon. This attack does 40 damage to each of them. (Don't apply Weakness and Resistance for Benched Pok\u00e9mon.)"
+        }
+      ],
+      "weakness": "water",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "combustion_damage",
+      "expected": 30
+    },
+    {
+      "name": "split_bomb_targets",
+      "expected": 2
+    },
+    {
+      "name": "split_bomb_damage_each",
+      "expected": 40
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_020_camerupt.rs"
+}

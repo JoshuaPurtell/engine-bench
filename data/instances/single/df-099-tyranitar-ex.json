@@ -1,0 +1,23 @@
+{
+  "id": "df-099-tyranitar-ex",
+  "name": "Tyranitar ex \u03b4 - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_099_tyranitar_ex.rs",
+  "cards": [
+    {
+      "id": "df-099",
+      "name": "Tyranitar ex \u03b4",
+      "set": "DF",
+      "number": 99,
+      "rarity": "rare_holo_ex",
+      "type": "pok\u00e9mon"
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}

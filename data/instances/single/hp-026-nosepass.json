@@ -1,0 +1,56 @@
+{
+  "id": "hp-026-nosepass",
+  "name": "Nosepass",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-026",
+      "name": "Nosepass",
+      "set": "HP",
+      "number": 26,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 60,
+      "types": [
+        "fighting"
+      ],
+      "attacks": [
+        {
+          "name": "Magnetic Grip",
+          "cost": [
+            "F"
+          ],
+          "damage": 0,
+          "text": "Search your discard pile for a Trainer card (excluding Supporter cards), show it to your opponent, and put it into your hand."
+        },
+        {
+          "name": "Rock Hurl",
+          "cost": [
+            "F",
+            "C"
+          ],
+          "damage": 20,
+          "text": "This attack's damage isn't affected by Resistance."
+        }
+      ],
+      "weakness": "water",
+      "retreat": 2
+    }
+  ],
+  "tests": [
+    {
+      "name": "magnetic_grip_count",
+      "expected": 1
+    },
+    {
+      "name": "rock_hurl_damage",
+      "expected": 20
+    },
+    {
+      "name": "rock_hurl_ignores_resistance",
+      "expected": true
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_026_nosepass.rs"
+}

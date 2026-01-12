@@ -1,0 +1,57 @@
+{
+  "id": "hp-062-cubone",
+  "name": "Cubone \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-062",
+      "name": "Cubone \u03b4",
+      "set": "HP",
+      "number": 62,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": [
+        "lightning"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Bone Club",
+          "cost": [
+            "L"
+          ],
+          "damage": 10,
+          "text": "Flip a coin. If tails, this attack does nothing."
+        },
+        {
+          "name": "Rage",
+          "cost": [
+            "C",
+            "C"
+          ],
+          "damage": 10,
+          "text": "Does 10 damage plus 10 more damage for each damage counter on Cubone."
+        }
+      ],
+      "weakness": "fighting",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "bone_club_damage",
+      "expected": 10
+    },
+    {
+      "name": "rage_base",
+      "expected": 10
+    },
+    {
+      "name": "rage_per_counter",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_062_cubone.rs"
+}

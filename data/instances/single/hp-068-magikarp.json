@@ -1,0 +1,40 @@
+{
+  "id": "hp-068-magikarp",
+  "name": "Magikarp \u03b4",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "cards": [
+    {
+      "id": "hp-068",
+      "name": "Magikarp \u03b4",
+      "set": "HP",
+      "number": 68,
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 30,
+      "types": [
+        "fire"
+      ],
+      "delta_species": true,
+      "attacks": [
+        {
+          "name": "Flail",
+          "cost": [
+            "C"
+          ],
+          "damage": 0,
+          "text": "Does 10 damage times the number of damage counters on Magikarp."
+        }
+      ],
+      "weakness": "lightning",
+      "retreat": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "flail_per_counter",
+      "expected": 10
+    }
+  ],
+  "card_file": "tcg_expansions/src/hp/cards/hp_068_magikarp.rs"
+}

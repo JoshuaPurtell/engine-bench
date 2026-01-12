@@ -1,0 +1,26 @@
+{
+  "id": "df-087-boost-energy",
+  "name": "Boost Energy - Dragon Frontiers",
+  "mode": "single_card",
+  "expansion": "dragon_frontiers",
+  "card_file": "tcg_expansions/src/df/cards/df_087_boost_energy.rs",
+  "cards": [
+    {
+      "id": "df-087",
+      "name": "Boost Energy",
+      "set": "DF",
+      "number": 87,
+      "rarity": "uncommon",
+      "type": "energy",
+      "energy_kind": "special",
+      "text": "Boost Energy can be attached only to an Evolved Pok\u00e9mon. Discard Boost Energy at the end of the turn it was attached. Boost Energy provides ColorlessColorlessColorless Energy. The Pok\u00e9mon Boost Energy is attached to can't retreat. If the Pok\u00e9mon Boost Energy is attached to isn't an Evolved Pok\u00e9mon, discard Boost Energy.",
+      "provides": []
+    }
+  ],
+  "tests": [
+    {
+      "name": "constants",
+      "description": "Test card constants match the spec"
+    }
+  ]
+}
