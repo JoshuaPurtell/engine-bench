@@ -1,0 +1,20 @@
+[package]
+name = "tcg_py"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tcg_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+rand = "0.8"
+rand_chacha = "0.3"
+
+# Published crates
+tcg_core = "0.1"
+tcg_rules_ex = "0.1"
+
+# Local AI implementations (copied from overzealous)
+# We'll include the AI code directly in this crate
