@@ -2,6 +2,8 @@
 
 Code generation benchmark where AI coding agents implement Pokemon TCG expansion cards in Rust.
 
+Designed to span a wide range of difficulties, with some cards easy enough for small language models to complete, others in the nano/mini range, and the hardest challenging even for SOTA coding agents.
+
 ## Crates and packages
 
 ### Rust crates (in this repo)
