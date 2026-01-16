@@ -12,3 +12,6 @@ Code generation benchmark where AI coding agents implement Pokemon TCG expansion
 ### Python package (this repo)
 
 - **`engine-bench` (Python)**: The evaluation harness + task app (FastAPI) that loads instances, spins up sandboxes (local/docker/daytona), runs the coding agent, and scores via deterministic Rust tests/replays.
+
+For the GEPA walkthrough and how to optimizing a coding agent on EngineBench with Synth AI, see
+https://docs.usesynth.ai/cookbooks/coding-agent-optimization.

@@ -267,10 +267,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1"
 
 [[package]]
+name = "tcg_ai"
+version = "0.1.0"
+dependencies = [
+ "rand",
+ "rand_chacha",
+ "tcg_core",
+ "tcg_rules_ex",
+]
+
+[[package]]
 name = "tcg_core"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7312cafc156a871de634aae43a20ae27fa655cf5525f09210e9e2e644ab83a5"
 dependencies = [
  "rand",
  "rand_chacha",
@@ -282,11 +290,14 @@ dependencies = [
 
 [[package]]
 name = "tcg_py"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "pyo3",
  "rand",
  "rand_chacha",
+ "serde",
+ "serde_json",
+ "tcg_ai",
  "tcg_core",
  "tcg_rules_ex",
 ]
@@ -294,8 +305,6 @@ dependencies = [
 [[package]]
 name = "tcg_rules_ex"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da23c63db1574fa4da99acfaecb94ced47366efc63ac5a0051d7c527fadc2736"
 dependencies = [
  "serde",
 ]

@@ -166,7 +166,14 @@ fn parse_action_from_fields(action_type: &str, text: &str, view: &GameView) -> R
         "chooseactive" | "choose_active" => {
             let card_id = extract_field(text, "card_id")
                 .ok_or_else(|| ParseError::MissingField("card_id".to_string()))?;
-            Ok(Action::ChooseActive { card_id: parse_card_id(card_id)? })
+            let parsed_id = parse_card_id(card_id)?;
+            // If a ChooseNewActive prompt is pending, accept ChooseActive as an alias.
+            if let Some(prompt) = &view.pending_prompt {
+                if matches!(prompt, Prompt::ChooseNewActive { .. }) {
+                    return Ok(Action::ChooseNewActive { card_id: parsed_id });
+                }
+            }
+            Ok(Action::ChooseActive { card_id: parsed_id })
         }
 
         "choosebench" | "choose_bench" => {

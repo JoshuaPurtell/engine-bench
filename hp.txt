@@ -1,0 +1,787 @@
+# EX Holon Phantoms (HP) - EngineBench Expansion Spec
+# ====================================================
+
+## Overview
+
+Add EX Holon Phantoms as a NEW expansion to engine-bench.
+Unlike DF (where engine already supports all mechanics), HP requires
+the agent to EXTEND the core engine for new mechanics.
+
+Set Info:
+- Name: EX Holon Phantoms
+- Release: May 2006 (before Crystal Guardians)
+- Cards: 111 total
+- Unique mechanic: "Holon's Pokemon" (can attach as Energy)
+
+
+## Goals
+
+1. Test agent's ability to EXTEND tcg_core (not just use existing hooks)
+2. Mix of easy cards (existing hooks) and hard cards (core changes)
+3. Gold implementation lives in engine-bench, overzealous stays unchanged
+4. Eval via behavior-based integration tests (same as DF)
+
+
+## Card Selection (35 cards)
+
+### Tier 1: Requires Core Engine Changes (1 card)
+Tests the agent's ability to extend tcg_core with new hooks.
+
+HP-044 Holon's Castform
+  - Can be played as Basic Pokemon OR attached as Energy
+  - Attachment requirement: target Pokemon must already have Energy attached
+  - When attached: return one Energy from target to hand
+  - As Energy: provides ALL types, but counts as 2 Energy at a time
+  - CORE CHANGE: new hooks for Pokemon-as-Energy
+  - Attack "Delta Draw": Draw cards equal to δ Pokemon in play
+
+
+### Tier 2: Interesting Poke-Powers/Bodies (12 cards)
+Use existing hooks but have complex logic.
+
+HP-007 Flygon δ (Delta Supply)
+  - Once per turn: attach basic Energy or δ Rainbow from hand to δ Pokemon
+  - Blocked by Special Condition
+  - Similar to DF Meganium but different trigger
+
+HP-008 Gyarados δ (Delta Search)
+  - When evolves: search deck for δ Pokemon
+
+HP-010 Kingdra δ (Dragon Curse)
+  - Once per turn: if Active, put 2 damage counters on opponent's δ Pokemon
+  - Blocked by Special Condition
+
+HP-011 Latias δ (Miraculous Light)
+  - Heal 10 from each of your Pokemon between turns
+
+HP-012 Latios δ (Psychic Impulse)
+  - Once per turn: look at opponent's hand
+
+HP-014 Pidgeot δ (Delta Reserve)
+  - Non-δ Pokemon can't use Poke-Powers (while Holon Energy attached)
+
+HP-015 Raichu δ (Electromagnetic Boost)
+  - Your δ Pokemon's attacks do +10 damage
+
+HP-016 Rayquaza δ (Delta Charge)
+  - Once per turn: attach [L] from discard to Rayquaza
+
+HP-017 Vileplume δ (Poison Pollen)
+  - Defending Pokemon is Poisoned after your attack
+
+HP-003 Deoxys δ (Attack Forme)
+  - High attack, low defense stats
+
+HP-004 Deoxys δ (Defense Forme)
+  - High defense, low attack stats
+
+HP-005 Deoxys δ (Normal Forme)
+  - Balanced stats
+
+
+### Tier 3: Attack Modifiers (10 cards)
+Standard complexity, test pattern matching from CG/DF.
+
+HP-001 Armaldo δ
+  - Delta Edge: 70 damage, but only 20 if you have a Supporter in play
+  - Fossil Charge: 50 + 30 to bench if discard a Fossil
+
+HP-002 Cradily δ
+  - Spiral Drain: heal damage equal to damage dealt
+
+HP-006 Deoxys δ (Speed Forme)
+  - Fastwave: ignores Resistance
+
+HP-009 Kabutops δ
+  - Primal Scythe: +20 for each React Energy attached
+
+HP-013 Omastar δ
+  - Pull Down: devolve defending Pokemon
+
+HP-018 Absol
+  - Feint Attack: damage isn't affected by effects
+
+HP-019 Blaziken
+  - Burn condition on attack
+
+HP-020 Mawile
+  - Mining: search deck for Trainer
+
+HP-021 Nosepass
+  - Magnetic Charge: attach Energy from deck
+
+HP-033 Claydol
+  - Psychic: damage based on opponent's energy
+
+
+### Tier 4: Trainers/Energy (7 cards)
+Test trainer and special energy implementation.
+
+HP-085 Holon Adventurer (Supporter)
+  - Draw 3; draw 4 if you discard a δ Pokemon
+
+HP-087 Holon Lake (Stadium)
+  - δ Pokemon can use "Delta Call" attack (search for Pokemon)
+
+HP-088 Mr. Stone's Project (Supporter)
+  - Search for 2 basic Energy OR 1 Special Energy
+
+HP-089 Professor Cozmo's Discovery (Supporter)
+  - Flip coin: heads draw 3, tails draw 2
+
+HP-090 Rare Candy (Trainer)
+  - Evolve Basic directly to Stage 2
+
+HP-094 δ Rainbow Energy (Special Energy)
+  - Provides all types but only to δ Pokemon
+
+HP-093 Holon Energy FF (Special Energy)
+  - Provides [F]; if [R] attached, provides [F][R]
+
+
+### Tier 5: Pre-evolutions (3 cards)
+Simple cards, test basic implementation.
+
+HP-048 Pichu δ
+HP-061 Trapinch δ
+HP-057 Horsea δ
+
+
+## Core Engine Changes Required
+
+### Holon's Pokemon Mechanic
+Holon's Castform can be attached as a Special Energy card with special conditions:
+1. Target Pokemon must already have at least one Energy attached
+2. When attached, player must return one Energy from target to hand
+3. Provides ALL types of Energy, but only 2 Energy at a time
+
+### New Hooks (tcg_core/src/runtime_hooks.rs)
+
+```rust
+/// Check if a Pokemon card can be attached as Energy (Holon's Pokemon)
+/// Returns true if the card is a Holon's Pokemon AND target has Energy attached
+pub type CanAttachAsPokemonEnergyFn =
+    fn(&GameState, card_id: CardInstanceId, target_id: CardInstanceId) -> bool;
+
+/// Get energy types when Pokemon attached as Energy
+/// For Holon's Castform: returns all 8 types
+pub type PokemonEnergyProvidesFn =
+    fn(&GameState, card_id: CardInstanceId, target_id: CardInstanceId) -> Vec<Type>;
+
+/// Get energy count when Pokemon attached as Energy
+/// For Holon's Castform: returns 2 (provides 2 Energy at a time)
+pub type PokemonEnergyCountFn =
+    fn(&GameState, card_id: CardInstanceId) -> u32;
+
+/// Called when Holon's Pokemon is attached as Energy - handles side effects
+/// For Holon's Castform: prompts to return an Energy to hand
+pub type OnPokemonEnergyAttachFn =
+    fn(&mut GameState, card_id: CardInstanceId, target_id: CardInstanceId);
+
+// Add to RuntimeHooks struct:
+pub struct RuntimeHooks {
+    // ... existing 21 hooks ...
+
+    pub can_attach_as_pokemon_energy: CanAttachAsPokemonEnergyFn,
+    pub pokemon_energy_provides: PokemonEnergyProvidesFn,
+    pub pokemon_energy_count: PokemonEnergyCountFn,
+    pub on_pokemon_energy_attach: OnPokemonEnergyAttachFn,
+}
+```
+
+### Game Logic Changes (tcg_core/src/game.rs)
+
+```rust
+// Modify can_attach_energy to check Pokemon-as-Energy
+pub fn can_attach_energy(&self, card_id: CardInstanceId, target_id: CardInstanceId) -> bool {
+    let card = self.get_card(card_id);
+
+    if card.is_energy() {
+        return self.validate_energy_attachment(card_id, target_id);
+    }
+
+    // NEW: Check if Pokemon can attach as energy (Holon's Pokemon)
+    if card.is_pokemon() {
+        return (self.hooks().can_attach_as_pokemon_energy)(self, card_id, target_id);
+    }
+
+    false
+}
+
+// Modify energy_provides to handle Pokemon-as-Energy
+pub fn energy_provides(&self, card_id: CardInstanceId, target_id: CardInstanceId) -> Vec<Type> {
+    let card = self.get_card(card_id);
+
+    if card.is_energy() {
+        return self.standard_energy_provides(card_id, target_id);
+    }
+
+    // NEW: Pokemon attached as energy
+    if self.is_attached_as_pokemon_energy(card_id) {
+        return (self.hooks().pokemon_energy_provides)(self, card_id, target_id);
+    }
+
+    vec![]
+}
+
+// NEW: Get energy count for attached Pokemon
+pub fn pokemon_energy_count(&self, card_id: CardInstanceId) -> u32 {
+    (self.hooks().pokemon_energy_count)(self, card_id)
+}
+
+// NEW: Handle side effects when attaching Holon's Pokemon as Energy
+pub fn on_attach_pokemon_energy(&mut self, card_id: CardInstanceId, target_id: CardInstanceId) {
+    (self.hooks().on_pokemon_energy_attach)(self, card_id, target_id);
+}
+```
+
+### Action Validation (tcg_core/src/action.rs)
+
+```rust
+// Modify AttachEnergy action to allow Pokemon cards
+Action::AttachEnergy { card_id, target_id } => {
+    let card = game.get_card(card_id);
+
+    // Standard energy
+    if card.is_energy() {
+        return validate_energy_attachment(game, card_id, target_id);
+    }
+
+    // NEW: Holon's Pokemon as energy
+    if card.is_pokemon() && (game.hooks().can_attach_as_pokemon_energy)(game, card_id, target_id) {
+        // Validate target has Energy attached (required for Holon's Pokemon)
+        if game.get_attached_energy(target_id).is_empty() {
+            return Err(InvalidAction::TargetHasNoEnergy);
+        }
+        return validate_pokemon_energy_attachment(game, card_id, target_id);
+    }
+
+    Err(InvalidAction::NotEnergy)
+}
+```
+
+
+## Directory Structure
+
+```
+engine-bench/
+├── data/instances/single/
+│   ├── hp-044-holons-castform.json      # Tier 1
+│   ├── hp-007-flygon.json               # Tier 2
+│   ├── hp-001-armaldo.json              # Tier 3
+│   ├── hp-085-holon-adventurer.json     # Tier 4
+│   ├── hp-048-pichu.json                # Tier 5
+│   └── ... (35 total)
+│
+├── gold/
+│   ├── core_patches/
+│   │   ├── hp_runtime_hooks.patch       # Patch for runtime_hooks.rs
+│   │   ├── hp_game_logic.patch          # Patch for game.rs
+│   │   └── hp_action_validation.patch   # Patch for action.rs
+│   │
+│   ├── stubs/
+│   │   ├── hp_044_holons_castform.rs
+│   │   ├── hp_007_flygon.rs
+│   │   └── ... (35 stubs)
+│   │
+│   ├── implementations/
+│   │   ├── hp_044_holons_castform.rs
+│   │   ├── hp_007_flygon.rs
+│   │   └── ... (35 implementations)
+│   │
+│   └── tests/
+│       ├── hp_044_holons_castform_eval.rs
+│       ├── hp_007_flygon_eval.rs
+│       └── ... (35 test files)
+│
+├── hp.txt                               # This spec
+└── docs/
+    └── adding_holon_phantoms.md         # Detailed planning doc
+```
+
+
+## Instance JSON Format
+
+```json
+// data/instances/single/hp-044-holons-castform.json
+{
+  "id": "hp-044-holons-castform",
+  "name": "Holon's Castform - Holon Phantoms",
+  "mode": "single_card",
+  "expansion": "holon_phantoms",
+  "requires_core_patch": true,
+  "card_file": "tcg_expansions/src/hp/cards/hp_044_holons_castform.rs",
+  "cards": [
+    {
+      "id": "hp-044",
+      "name": "Holon's Castform",
+      "type": "pokemon",
+      "stage": "basic",
+      "hp": 50,
+      "types": ["colorless"],
+      "holon_pokemon": true,
+      "energy_provision": {
+        "default": ["colorless", "colorless"],
+        "with_holon": "all"
+      },
+      "attacks": [
+        {
+          "name": "Delta Draw",
+          "cost": ["colorless"],
+          "damage": 0,
+          "text": "Count the number of Pokemon you have in play that has δ on its card. Draw that many cards."
+        }
+      ],
+      "weakness": { "type": "fighting", "modifier": "+10" },
+      "retreat_cost": 1
+    }
+  ],
+  "tests": [
+    {
+      "name": "attach_as_energy_provides_colorless",
+      "description": "When attached as energy, provides 2 colorless"
+    },
+    {
+      "name": "attach_as_energy_with_holon_provides_all",
+      "description": "With another Holon's Pokemon, provides all types"
+    },
+    {
+      "name": "can_play_as_basic_pokemon",
+      "description": "Can also be played as a Basic Pokemon normally"
+    },
+    {
+      "name": "delta_draw_counts_delta_pokemon",
+      "description": "Delta Draw attack draws cards equal to delta Pokemon in play"
+    }
+  ]
+}
+```
+
+
+## Eval Test Examples
+
+### Tier 1: Core Change Required
+
+```rust
+// gold/tests/hp_044_holons_castform_eval.rs
+
+#[cfg(test)]
+mod hp_044_holons_castform_eval {
+    use super::*;
+    use tcg_core::test_utils::*;
+
+    fn setup_with_castform() -> (GameState, CardInstanceId, CardInstanceId) {
+        let mut game = GameState::new_test();
+        let castform = game.add_to_hand(PlayerId::P1, card_def("HP", 44));
+        let pokemon = game.set_active(PlayerId::P1, basic_pokemon());
+        (game, castform, pokemon)
+    }
+
+    #[test]
+    fn test_attach_as_energy_provides_colorless() {
+        let (mut game, castform, pokemon) = setup_with_castform();
+
+        // Should be able to attach Castform as energy
+        let result = game.apply_action(PlayerId::P1, Action::AttachEnergy {
+            card_id: castform,
+            target_id: pokemon,
+        });
+        assert!(result.is_ok());
+
+        // Should provide 2 colorless
+        let energy = game.get_attached_energy(pokemon);
+        assert_eq!(energy.len(), 1);
+        assert_eq!(game.energy_provides(castform, pokemon), vec![Type::Colorless, Type::Colorless]);
+    }
+
+    #[test]
+    fn test_attach_as_energy_with_holon_provides_all() {
+        let (mut game, castform, pokemon) = setup_with_castform();
+
+        // First attach a Holon's Pokemon
+        let holon1 = game.add_to_hand(PlayerId::P1, card_def("HP", 44));
+        game.apply_action(PlayerId::P1, Action::AttachEnergy {
+            card_id: holon1,
+            target_id: pokemon,
+        }).unwrap();
+
+        // Now attach second Holon's Castform
+        game.apply_action(PlayerId::P1, Action::AttachEnergy {
+            card_id: castform,
+            target_id: pokemon,
+        }).unwrap();
+
+        // Second one should provide ALL types
+        let provides = game.energy_provides(castform, pokemon);
+        assert!(provides.contains(&Type::Fire));
+        assert!(provides.contains(&Type::Water));
+        assert!(provides.contains(&Type::Grass));
+        assert!(provides.contains(&Type::Lightning));
+        assert!(provides.contains(&Type::Psychic));
+        assert!(provides.contains(&Type::Fighting));
+    }
+
+    #[test]
+    fn test_can_play_as_basic_pokemon() {
+        let (mut game, castform, _) = setup_with_castform();
+
+        // Should be able to play as Basic Pokemon
+        let result = game.apply_action(PlayerId::P1, Action::PlayBasic {
+            card_id: castform,
+        });
+        assert!(result.is_ok());
+
+        // Should be on bench
+        assert!(game.players[0].bench.iter().any(|s| s.card.id == castform));
+    }
+
+    #[test]
+    fn test_delta_draw_counts_delta_pokemon() {
+        let mut game = setup_game_with_castform_active();
+
+        // Add 3 delta Pokemon to play
+        game.add_delta_pokemon_to_bench(PlayerId::P1, 3);
+
+        let hand_before = game.players[0].hand.len();
+
+        // Use Delta Draw
+        game.apply_action(PlayerId::P1, Action::Attack {
+            attack_name: "Delta Draw".to_string(),
+        }).unwrap();
+
+        // Should draw 4 cards (3 bench + 1 active Castform if delta)
+        let hand_after = game.players[0].hand.len();
+        assert_eq!(hand_after - hand_before, 3); // or 4 if Castform is delta
+    }
+}
+```
+
+### Tier 2: Poke-Power (Existing Hooks)
+
+```rust
+// gold/tests/hp_007_flygon_eval.rs
+
+#[cfg(test)]
+mod hp_007_flygon_eval {
+    use super::*;
+
+    #[test]
+    fn test_delta_supply_attach_basic_energy() {
+        let mut game = setup_with_flygon_active();
+        let energy = game.add_to_hand(PlayerId::P1, basic_energy(Type::Fire));
+        let delta_pokemon = game.get_bench_pokemon(PlayerId::P1, 0);
+
+        // Use Delta Supply
+        game.apply_action(PlayerId::P1, Action::UsePower {
+            source_id: flygon_id,
+            power_name: "Delta Supply".to_string(),
+        }).unwrap();
+
+        // Should prompt for energy selection
+        assert!(matches!(
+            game.pending_prompt,
+            Some(Prompt::ChooseCard { .. })
+        ));
+
+        // Select the energy
+        game.apply_action(PlayerId::P1, Action::SelectCard {
+            card_id: energy,
+        }).unwrap();
+
+        // Select target (must be delta Pokemon)
+        game.apply_action(PlayerId::P1, Action::SelectPokemon {
+            pokemon_id: delta_pokemon,
+        }).unwrap();
+
+        // Energy should be attached
+        assert!(game.get_attached_energy(delta_pokemon).contains(&energy));
+    }
+
+    #[test]
+    fn test_delta_supply_blocked_by_special_condition() {
+        let mut game = setup_with_flygon_active();
+        game.apply_special_condition(flygon_id, SpecialCondition::Asleep);
+
+        // Delta Supply should fail
+        let result = game.apply_action(PlayerId::P1, Action::UsePower {
+            source_id: flygon_id,
+            power_name: "Delta Supply".to_string(),
+        });
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_delta_supply_only_targets_delta_pokemon() {
+        let mut game = setup_with_flygon_and_mixed_bench();
+        let energy = game.add_to_hand(PlayerId::P1, basic_energy(Type::Fire));
+
+        game.apply_action(PlayerId::P1, Action::UsePower {
+            source_id: flygon_id,
+            power_name: "Delta Supply".to_string(),
+        }).unwrap();
+
+        // Select energy
+        game.apply_action(PlayerId::P1, Action::SelectCard {
+            card_id: energy,
+        }).unwrap();
+
+        // Prompt should only show delta Pokemon as valid targets
+        if let Some(Prompt::ChoosePokemon { valid_targets, .. }) = &game.pending_prompt {
+            for target in valid_targets {
+                assert!(game.pokemon_is_delta(*target));
+            }
+        }
+    }
+}
+```
+
+### Tier 3: Attack Modifier
+
+```rust
+// gold/tests/hp_001_armaldo_eval.rs
+
+#[cfg(test)]
+mod hp_001_armaldo_eval {
+    use super::*;
+
+    #[test]
+    fn test_delta_edge_bonus_vs_delta() {
+        let mut game = setup_armaldo_vs_delta_pokemon();
+
+        // Delta Edge: 70 + 30 if defending is delta
+        game.apply_action(PlayerId::P1, Action::Attack {
+            attack_name: "Delta Edge".to_string(),
+        }).unwrap();
+
+        let damage = game.last_attack_damage();
+        assert_eq!(damage, 100); // 70 base + 30 bonus
+    }
+
+    #[test]
+    fn test_delta_edge_no_bonus_vs_normal() {
+        let mut game = setup_armaldo_vs_normal_pokemon();
+
+        game.apply_action(PlayerId::P1, Action::Attack {
+            attack_name: "Delta Edge".to_string(),
+        }).unwrap();
+
+        let damage = game.last_attack_damage();
+        assert_eq!(damage, 70); // 70 base, no bonus
+    }
+}
+```
+
+### Tier 4: Trainer
+
+```rust
+// gold/tests/hp_085_holon_adventurer_eval.rs
+
+#[cfg(test)]
+mod hp_085_holon_adventurer_eval {
+    use super::*;
+
+    #[test]
+    fn test_draw_3_normally() {
+        let mut game = setup_with_holon_adventurer();
+        let hand_before = game.players[0].hand.len();
+
+        game.apply_action(PlayerId::P1, Action::PlaySupporter {
+            card_id: adventurer_id,
+        }).unwrap();
+
+        // Must discard a card
+        game.apply_action(PlayerId::P1, Action::SelectCard {
+            card_id: some_card_id,
+        }).unwrap();
+
+        // Should draw 3
+        let hand_after = game.players[0].hand.len();
+        assert_eq!(hand_after, hand_before - 1 - 1 + 3); // -adventurer -discard +3
+    }
+
+    #[test]
+    fn test_draw_4_if_discard_delta() {
+        let mut game = setup_with_holon_adventurer();
+        let delta_pokemon = game.add_to_hand(PlayerId::P1, delta_pokemon_card());
+        let hand_before = game.players[0].hand.len();
+
+        game.apply_action(PlayerId::P1, Action::PlaySupporter {
+            card_id: adventurer_id,
+        }).unwrap();
+
+        // Discard a delta Pokemon
+        game.apply_action(PlayerId::P1, Action::SelectCard {
+            card_id: delta_pokemon,
+        }).unwrap();
+
+        // Should draw 4 (bonus for discarding delta)
+        let hand_after = game.players[0].hand.len();
+        assert_eq!(hand_after, hand_before - 1 - 1 + 4); // -adventurer -discard +4
+    }
+}
+```
+
+
+## Stub File Format
+
+```rust
+// gold/stubs/hp_044_holons_castform.rs
+
+//! Holon's Castform - Holon Phantoms #44
+//!
+//! Basic Pokemon - Colorless Type - HP 50
+//! Weakness: Fighting +10 | Resistance: None | Retreat: 1
+//!
+//! ## Special: Holon's Pokemon
+//! You may attach this card to 1 of your Pokemon as a Special Energy card.
+//! When attached, it provides [C][C]. If you have another Holon's Pokemon
+//! attached to this Pokemon, this card provides all types of Energy instead.
+//!
+//! ## Attack: Delta Draw - [C]
+//! Count the number of Pokemon you have in play that has δ on its card.
+//! Draw that many cards.
+
+use tcg_core::{CardInstanceId, GameState, PlayerId, Type};
+
+/// Card identifiers
+pub const SET: &str = "HP";
+pub const NUMBER: u32 = 44;
+pub const NAME: &str = "Holon's Castform";
+
+// ============================================================================
+// Holon's Pokemon: Energy Attachment
+// ============================================================================
+
+/// Check if this card can be attached as Energy.
+///
+/// Holon's Pokemon can always be attached as Energy.
+pub fn can_attach_as_energy(_game: &GameState, _card_id: CardInstanceId) -> bool {
+    // Return true for Holon's Pokemon
+    false
+}
+
+/// Get the energy types provided when attached.
+///
+/// Implement
+/// - Default: provides [C][C] (2 colorless)
+/// - If another Holon's Pokemon is attached to same target: provides ALL types
+pub fn energy_provides(
+    _game: &GameState,
+    _card_id: CardInstanceId,
+    _target_id: CardInstanceId
+) -> Vec<Type> {
+    // Implement
+    vec![]
+}
+
+/// Check if another Holon's Pokemon is attached to the same target.
+///
+/// Scan attached cards for Holon's Pokemon marker
+pub fn has_another_holon_attached(
+    _game: &GameState,
+    _card_id: CardInstanceId,
+    _target_id: CardInstanceId
+) -> bool {
+    // Implement
+    false
+}
+
+// ============================================================================
+// Attack: Delta Draw
+// ============================================================================
+
+/// Count delta Pokemon in play for Delta Draw.
+///
+/// Count Pokemon with delta marker
+pub fn delta_draw_count(game: &GameState, player: PlayerId) -> usize {
+    // Count active + bench delta Pokemon
+    0
+}
+
+// ============================================================================
+// Tests (agent-written, not eval)
+// ============================================================================
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_is_holon_pokemon() {
+        assert_eq!(NAME, "Holon's Castform");
+    }
+}
+```
+
+
+## Eval Flow
+
+```
+1. Setup sandbox with vanilla overzealous (CG/DF only)
+
+2. Give agent:
+   - Stub file (hp_044_holons_castform.rs)
+   - Card spec JSON
+   - EXTENDING_ENGINE.md documentation
+   - CG/DF as reference
+
+3. Agent works:
+   - Reads stub, understands requirements
+   - Tries existing hooks, realizes they don't support Pokemon-as-Energy
+   - Reads EXTENDING_ENGINE.md
+   - Adds hooks to tcg_core/src/runtime_hooks.rs
+   - Modifies tcg_core/src/game.rs for energy attachment
+   - Creates tcg_expansions/src/hp/ directory
+   - Implements card logic
+   - Runs cargo check, cargo test
+
+4. Eval:
+   - Copy agent's changes into fresh sandbox
+   - Inject eval tests into card file
+   - cargo test --package tcg_expansions hp_044
+   - Score = passed / total
+
+5. Scoring:
+   - Compile: 30%
+   - Tests: 70%
+   - Same as DF
+```
+
+
+## Implementation Phases
+
+See `engine-bench/todos.md` for the centralized plan.
+
+
+## Success Metrics
+
+1. Agent can implement standard HP cards (Tier 3-5): 80%+ pass rate
+2. Agent can implement Poke-Power cards (Tier 2): 60%+ pass rate
+3. Agent can extend core for Holon's Pokemon (Tier 1): 30%+ pass rate
+
+Tier 1 is intentionally hard - tests true engineering ability.
+
+
+## Open Questions
+
+1. Are there other Holon's Pokemon besides Castform in HP?
+   - Need to verify card list
+
+2. How to handle partial core changes?
+   - Agent adds hooks but wrong signature
+   - Tests will fail but might be close
+
+3. Should we provide hook signatures in stub?
+   - Pro: Clearer what's expected
+   - Con: Less realistic engineering task
+
+4. Replay format for Pokemon-as-Energy?
+   - Need to extend replay format to capture this action
+
+
+## References
+
+- Pokellector HP list: https://www.pokellector.com/EX-Holon-Phantoms-Expansion/
+- Bulbapedia HP: https://bulbapedia.bulbagarden.net/wiki/EX_Holon_Phantoms_(TCG)
+- EXTENDING_ENGINE.md: overzealous/EXTENDING_ENGINE.md
+- DF implementation: tcg_expansions/src/df/
