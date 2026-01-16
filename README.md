@@ -13,6 +13,9 @@ Designed to span a wide range of difficulties, with some cards easy enough for s
 - **Evaluation**: Deterministic Rust integration tests with seeded game replays
 - **Scoring**: Based on compilation success, test pass rate, and similarity to reference implementations
 
+For the GEPA walkthrough and how to optimize a coding agent on EngineBench with Synth AI, see
+https://docs.usesynth.ai/cookbooks/coding-agent-optimization.
+
 ## Example Task
 
 Each task consists of:
@@ -178,6 +181,3 @@ with TODO comments. Replace the TODO implementations with actual working code.
 ### Python package (this repo)
 
 - **`engine-bench` (Python)**: The evaluation harness + task app (FastAPI) that loads instances, spins up sandboxes (local/docker/daytona), runs the coding agent, and scores via deterministic Rust tests/replays.
-
-For the GEPA walkthrough and how to optimizing a coding agent on EngineBench with Synth AI, see
-https://docs.usesynth.ai/cookbooks/coding-agent-optimization.
