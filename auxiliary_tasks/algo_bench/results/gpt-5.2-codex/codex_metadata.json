@@ -1,0 +1,72 @@
+[
+  {
+    "run": 1,
+    "success": true,
+    "error": null,
+    "duration": 300.04556584358215,
+    "code_chars": 5335
+  },
+  {
+    "run": 2,
+    "success": true,
+    "error": null,
+    "duration": 5.126895904541016,
+    "code_chars": 5331
+  },
+  {
+    "run": 3,
+    "success": true,
+    "error": null,
+    "duration": 203.28603076934814,
+    "code_chars": 42141
+  },
+  {
+    "run": 4,
+    "success": true,
+    "error": null,
+    "duration": 172.344957113266,
+    "code_chars": 45537
+  },
+  {
+    "run": 5,
+    "success": true,
+    "error": null,
+    "duration": 226.2668228149414,
+    "code_chars": 25995
+  },
+  {
+    "run": 6,
+    "success": false,
+    "error": "SubmissionFailedCompilation",
+    "duration": 47.805500984191895,
+    "code_chars": 9793
+  },
+  {
+    "run": 7,
+    "success": false,
+    "error": "SubmissionFailedCompilation",
+    "duration": 115.23378896713257,
+    "code_chars": 6797
+  },
+  {
+    "run": 8,
+    "success": true,
+    "error": null,
+    "duration": 300.0530068874359,
+    "code_chars": 5335
+  },
+  {
+    "run": 9,
+    "success": false,
+    "error": "SubmissionFailedCompilation",
+    "duration": 44.72710299491882,
+    "code_chars": 9496
+  },
+  {
+    "run": 10,
+    "success": true,
+    "error": null,
+    "duration": 267.3213691711426,
+    "code_chars": 41114
+  }
+]
