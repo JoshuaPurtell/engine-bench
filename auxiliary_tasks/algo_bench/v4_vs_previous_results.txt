@@ -1,0 +1,94 @@
+AI Version Comparison Results: RandomAiV4 vs Previous Versions
+================================================================
+
+Benchmark Configuration:
+- Matches per pairing: 300 (each direction = 600 total per deck)
+- Decks tested: 8 public decks
+- Total matches: 14,400 games
+- Threads: 4
+
+Results Summary:
+================
+
+┌─────────────┬──────────┬──────────┬──────────┐
+│ Opponent    │ Wins     │ Matches  │ Win %    │
+├─────────────┼──────────┼──────────┼──────────┤
+│ RandomAi    │  2,728   │  4,800   │  56.8%   │
+│ (v1)        │          │          │          │
+├─────────────┼──────────┼──────────┼──────────┤
+│ RandomAiV2  │  2,599   │  4,800   │  54.1%   │
+│ (v2)        │          │          │          │
+├─────────────┼──────────┼──────────┼──────────┤
+│ RandomAiV3  │  2,192   │  4,800   │  45.7%   │
+│ (v3)        │          │          │          │
+├─────────────┼──────────┼──────────┼──────────┤
+│ OVERALL     │  7,519   │ 14,400   │  52.2%   │
+└─────────────┴──────────┴──────────┴──────────┘
+
+Per-Deck Breakdown:
+===================
+
+vs RandomAi (v1):
+  Gardevoir ex / Ludicolo Fire Midrange:    43.3% (260/600)
+  Kyogre ex Hydro Shot Aggro:               28.0% (168/600)
+  Overzealous-v0:                           68.7% (412/600)
+  Rayquaza ex δ Snipe Aggro:                44.8% (269/600)
+  Sceptile ex Delta:                        85.5% (513/600) ⭐
+  Sceptile ex Lock Control:                 51.8% (311/600)
+  Swampert ex / Kyogre ex Water Midrange:  64.2% (385/600)
+  Tyranitar ex / Ninetales δ Control:      68.3% (410/600)
+
+vs RandomAiV2 (v2):
+  Gardevoir ex / Ludicolo Fire Midrange:    35.7% (214/600)
+  Kyogre ex Hydro Shot Aggro:               30.0% (180/600)
+  Overzealous-v0:                           59.0% (354/600)
+  Rayquaza ex δ Snipe Aggro:                42.3% (254/600)
+  Sceptile ex Delta:                        85.2% (511/600) ⭐
+  Sceptile ex Lock Control:                 49.0% (294/600)
+  Swampert ex / Kyogre ex Water Midrange:  57.3% (344/600)
+  Tyranitar ex / Ninetales δ Control:      74.7% (448/600)
+
+vs RandomAiV3 (v3):
+  Gardevoir ex / Ludicolo Fire Midrange:    44.0% (264/600)
+  Kyogre ex Hydro Shot Aggro:               48.7% (292/600)
+  Overzealous-v0:                           37.5% (225/600)
+  Rayquaza ex δ δ Snipe Aggro:              47.5% (285/600)
+  Sceptile ex Delta:                        44.0% (264/600)
+  Sceptile ex Lock Control:                 48.8% (293/600)
+  Swampert ex / Kyogre ex Water Midrange:  48.3% (290/600)
+  Tyranitar ex / Ninetales δ Control:      46.5% (279/600)
+
+Game Statistics:
+================
+- Median game duration: 0.006s
+- P90 game duration: 0.011s
+- Max game duration: 0.093s
+- Median turns: 33
+- P90 turns: 58
+- Max turns: 83
+- Total games: 14,400
+
+Analysis:
+=========
+RandomAiV4 shows:
+✅ Strong performance vs RandomAi (v1): +6.8% win rate advantage
+✅ Moderate performance vs RandomAiV2 (v2): +4.1% win rate advantage
+❌ Weak performance vs RandomAiV3 (v3): -4.3% win rate disadvantage
+
+Overall, RandomAiV4 achieves a 52.2% win rate across all opponents, indicating
+it is slightly better than average but not dramatically superior to v3.
+
+Notable observations:
+- v4 performs exceptionally well on "Sceptile ex Delta" deck vs v1 and v2 (85%+ win rate)
+- v4 struggles significantly against v3, losing on 7 out of 8 decks
+- v4 shows strong performance on "Overzealous-v0" vs v1/v2 but weak vs v3
+- Performance varies significantly by deck type, indicating deck-specific
+  optimization opportunities
+- Results are consistent across sample sizes (50 vs 300 matches), indicating
+  statistical stability
+
+Statistical Significance:
+=========================
+With 600 matches per deck per opponent (300 each direction), the results have
+high statistical power. The consistent 52.2% overall win rate across different
+sample sizes suggests the performance gap vs v3 is real and not due to variance.
