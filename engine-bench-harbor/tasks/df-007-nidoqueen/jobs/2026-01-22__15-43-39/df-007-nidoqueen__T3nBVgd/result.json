@@ -1,0 +1,91 @@
+{
+    "id": "926d9fb8-222c-4872-a1cc-1964799683fc",
+    "task_name": "df-007-nidoqueen",
+    "trial_name": "df-007-nidoqueen__T3nBVgd",
+    "trial_uri": "file:///Users/joshpurtell/Documents/GitHub/engine-bench/engine-bench-harbor/tasks/df-007-nidoqueen/jobs/2026-01-22__15-43-39/df-007-nidoqueen__T3nBVgd",
+    "task_id": {
+        "path": "/Users/joshpurtell/Documents/GitHub/engine-bench/engine-bench-harbor/tasks/df-007-nidoqueen"
+    },
+    "source": null,
+    "task_checksum": "5aee8e8f2cfa78d054d35848fc6f751dd1bac9bf705f8ca4a311861927a8cc67",
+    "config": {
+        "task": {
+            "path": "/Users/joshpurtell/Documents/GitHub/engine-bench/engine-bench-harbor/tasks/df-007-nidoqueen",
+            "git_url": null,
+            "git_commit_id": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "df-007-nidoqueen__T3nBVgd",
+        "trials_dir": "jobs/2026-01-22__15-43-39",
+        "timeout_multiplier": 1.0,
+        "agent": {
+            "name": "oracle",
+            "import_path": null,
+            "model_name": null,
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": true,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "job_id": "47edc9c2-7bcd-4b57-bd36-0000594a0f9b"
+    },
+    "agent_info": {
+        "name": "oracle",
+        "version": "1.0.0",
+        "model_info": null
+    },
+    "agent_result": {
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": null
+    },
+    "verifier_result": {
+        "rewards": {
+            "compile_ok": 1,
+            "tests_passed": 3,
+            "tests_total": 3,
+            "pass_rate": 1.0,
+            "score": 1.0
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-01-22T23:43:39.926242Z",
+    "finished_at": "2026-01-22T23:44:39.881990Z",
+    "environment_setup": {
+        "started_at": "2026-01-22T23:43:39.945925Z",
+        "finished_at": "2026-01-22T23:44:01.870780Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-01-22T23:44:01.871600Z",
+        "finished_at": "2026-01-22T23:44:01.871910Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-01-22T23:44:01.872198Z",
+        "finished_at": "2026-01-22T23:44:02.072510Z"
+    },
+    "verifier": {
+        "started_at": "2026-01-22T23:44:02.072720Z",
+        "finished_at": "2026-01-22T23:44:29.343068Z"
+    }
+}

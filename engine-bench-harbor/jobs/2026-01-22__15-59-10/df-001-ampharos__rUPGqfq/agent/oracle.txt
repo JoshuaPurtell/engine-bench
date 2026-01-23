@@ -1,0 +1,3 @@
+=== Oracle solve.sh ===
+Applying gold solution from /solution/df_001_ampharos.rs to /app/src/df/cards/df_001_ampharos.rs
+Applied oracle solution successfully

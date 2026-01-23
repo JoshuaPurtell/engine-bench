@@ -1,0 +1,29 @@
+{
+    "id": "c3fd619b-8cce-4187-9d89-e5ff2a84edff",
+    "started_at": "2026-01-22T15:59:10.026873",
+    "finished_at": "2026-01-22T16:00:34.366904",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "oracle__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.3
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.3": [
+                            "df-001-ampharos__rUPGqfq"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

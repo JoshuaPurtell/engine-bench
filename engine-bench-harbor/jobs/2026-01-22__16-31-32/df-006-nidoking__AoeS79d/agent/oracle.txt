@@ -1,0 +1,3 @@
+=== Oracle solve.sh ===
+Applying gold solution from /solution/df_006_nidoking.rs to /app/src/df/cards/df_006_nidoking.rs
+ERROR: Missing oracle solution at /solution/df_006_nidoking.rs

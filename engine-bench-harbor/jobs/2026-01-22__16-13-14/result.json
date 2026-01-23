@@ -1,0 +1,28 @@
+{
+    "id": "3fa679f5-f265-412c-86fe-8f4aa0ba13c3",
+    "started_at": "2026-01-22T16:13:14.435644",
+    "finished_at": "2026-01-22T16:13:18.731603",
+    "n_total_trials": 2,
+    "stats": {
+        "n_trials": 2,
+        "n_errors": 2,
+        "evals": {
+            "codex__tasks": {
+                "n_trials": 0,
+                "n_errors": 2,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {},
+                "exception_stats": {
+                    "DaytonaError": [
+                        "df-001-ampharos__XdsuwLd",
+                        "df-006-nidoking__GNppfto"
+                    ]
+                }
+            }
+        }
+    }
+}

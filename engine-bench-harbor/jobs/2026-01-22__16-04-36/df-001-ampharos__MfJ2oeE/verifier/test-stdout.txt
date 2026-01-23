@@ -1,0 +1,5 @@
+=== EngineBench Verifier ===
+Working directory: /app
+Card path: /app/src/df/cards/df_001_ampharos.rs
+
+ERROR: Card file not found at /app/src/df/cards/df_001_ampharos.rs

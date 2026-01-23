@@ -1,0 +1,23 @@
+=== EngineBench Verifier ===
+Working directory: /app
+Card path: /app/tcg_expansions/src/df/cards/df_007_nidoqueen.rs
+
+Injecting eval tests from /tests/df_007_nidoqueen_eval.rs
+
+=== Running cargo check ===
+error: failed to parse lock file at: /app/Cargo.lock
+
+Caused by:
+  lock file version `4` was found, but this version of Cargo does not understand this lock file, perhaps Cargo needs to be updated?
+Compile exit code: 101
+Compilation failed. Skipping tests.
+
+=== Verifier complete ===
+Score: 0.0
+{
+  "compile_ok": 0,
+  "tests_passed": 0,
+  "tests_total": 0,
+  "pass_rate": 0.0,
+  "score": 0.0
+}

@@ -1,0 +1,29 @@
+{
+    "id": "fd7b6418-1f74-406b-92c4-0881fc564980",
+    "started_at": "2026-01-22T15:48:53.658772",
+    "finished_at": "2026-01-22T15:50:41.481017",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "codex__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "df-007-nidoqueen__st8xtka"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

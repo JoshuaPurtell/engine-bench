@@ -1,0 +1,39 @@
+{
+    "task": {
+        "path": "/Users/joshpurtell/Documents/GitHub/engine-bench/engine-bench-harbor/tasks/df-007-nidoqueen",
+        "git_url": null,
+        "git_commit_id": null,
+        "overwrite": false,
+        "download_dir": null,
+        "source": null
+    },
+    "trial_name": "df-007-nidoqueen__st8xtka",
+    "trials_dir": "jobs/2026-01-22__15-48-53",
+    "timeout_multiplier": 1.0,
+    "agent": {
+        "name": "codex",
+        "import_path": null,
+        "model_name": "gpt-5-nano",
+        "override_timeout_sec": null,
+        "override_setup_timeout_sec": null,
+        "max_timeout_sec": null,
+        "kwargs": {}
+    },
+    "environment": {
+        "type": "docker",
+        "import_path": null,
+        "force_build": false,
+        "delete": true,
+        "override_cpus": null,
+        "override_memory_mb": null,
+        "override_storage_mb": null,
+        "override_gpus": null,
+        "kwargs": {}
+    },
+    "verifier": {
+        "override_timeout_sec": null,
+        "max_timeout_sec": null,
+        "disable": false
+    },
+    "job_id": "fd7b6418-1f74-406b-92c4-0881fc564980"
+}

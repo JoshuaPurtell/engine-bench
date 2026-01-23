@@ -1,0 +1,16 @@
+bash: cannot set terminal process group (1): Inappropriate ioctl for device
+bash: no job control in this shell
+debconf: delaying package configuration, since apt-utils is not installed
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 16631  100 16631    0     0   173k      0 --:--:-- --:--:-- --:--:--  174k
+Cloning into '/root/.nvm'...
+Downloading https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.xz...
+#####################                                                     30.3%###############################################################           88.0%######################################################################## 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+npm notice
+npm notice New major version of npm available! 10.9.4 -> 11.8.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.8.0
+npm notice To update run: npm install -g npm@11.8.0
+npm notice

@@ -1,0 +1,3 @@
+=== Oracle solve.sh ===
+Applying gold solution from /solution/df_007_nidoqueen.rs to /app/src/df/cards/df_007_nidoqueen.rs
+Applied oracle solution successfully

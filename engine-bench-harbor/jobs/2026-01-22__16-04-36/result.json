@@ -1,0 +1,30 @@
+{
+    "id": "326085f6-e056-4bbf-9676-ecfff0ae09e1",
+    "started_at": "2026-01-22T16:04:36.191698",
+    "finished_at": null,
+    "n_total_trials": 2,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "codex__tasks": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.3
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "0.3": [
+                            "df-006-nidoking__8RmfvK5"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    },
+    "trial_results": []
+}

@@ -1,0 +1,251 @@
+=== EngineBench Verifier ===
+Working directory: /app
+Card path: /app/src/df/cards/df_007_nidoqueen.rs
+
+Injecting eval tests from /tests/df_007_nidoqueen_eval.rs
+
+=== Running cargo check ===
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded quote v1.0.43
+  Downloaded serde_core v1.0.228
+  Downloaded rand v0.8.5
+  Downloaded ppv-lite86 v0.2.21
+  Downloaded thiserror-impl v1.0.69
+  Downloaded getrandom v0.2.17
+  Downloaded zerocopy v0.8.33
+  Downloaded proc-macro2 v1.0.105
+  Downloaded serde v1.0.228
+  Downloaded serde_json v1.0.149
+  Downloaded syn v2.0.114
+  Downloaded serde_derive v1.0.228
+  Downloaded itoa v1.0.17
+  Downloaded libc v0.2.180
+  Downloaded tcg_core v0.1.0
+  Downloaded thiserror v1.0.69
+  Downloaded cfg-if v1.0.4
+  Downloaded zmij v1.0.13
+  Downloaded rand_chacha v0.3.1
+  Downloaded rand_core v0.6.4
+  Downloaded memchr v2.7.6
+  Downloaded unicode-ident v1.0.22
+  Downloaded tcg_rules_ex v0.1.0
+   Compiling proc-macro2 v1.0.105
+   Compiling unicode-ident v1.0.22
+   Compiling quote v1.0.43
+   Compiling serde_core v1.0.228
+   Compiling syn v2.0.114
+   Compiling libc v0.2.180
+   Compiling zerocopy v0.8.33
+   Compiling serde v1.0.228
+   Compiling serde_derive v1.0.228
+    Checking cfg-if v1.0.4
+    Checking getrandom v0.2.17
+   Compiling zmij v1.0.13
+    Checking ppv-lite86 v0.2.21
+    Checking rand_core v0.6.4
+   Compiling thiserror v1.0.69
+   Compiling serde_json v1.0.149
+    Checking rand_chacha v0.3.1
+   Compiling thiserror-impl v1.0.69
+    Checking memchr v2.7.6
+    Checking itoa v1.0.17
+    Checking rand v0.8.5
+    Checking tcg_rules_ex v0.1.0
+    Checking tcg_core v0.1.0
+    Checking tcg_expansions v0.1.0 (/app)
+warning: unused imports: `PlayerId`, `Prompt`, and `SelectionDestination`
+  --> src/df/cards/df_007_nidoqueen.rs:16:43
+   |
+16 | use tcg_core::{CardInstanceId, GameState, PlayerId, Prompt, SelectionDestination};
+   |                                           ^^^^^^^^  ^^^^^^  ^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `game`
+  --> src/df/cards/df_007_nidoqueen.rs:35:27
+   |
+35 | pub fn execute_invitation(game: &mut GameState, source_id: CardInstanceId) -> bool {
+   |                           ^^^^ help: if this is intentional, prefix it with an underscore: `_game`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `source_id`
+  --> src/df/cards/df_007_nidoqueen.rs:35:49
+   |
+35 | pub fn execute_invitation(game: &mut GameState, source_id: CardInstanceId) -> bool {
+   |                                                 ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_source_id`
+
+warning: unused variable: `game`
+  --> src/df/cards/df_007_nidoqueen.rs:57:24
+   |
+57 | pub fn vengeance_bonus(game: &GameState, attacker_id: CardInstanceId) -> i32 {
+   |                        ^^^^ help: if this is intentional, prefix it with an underscore: `_game`
+
+warning: unused variable: `attacker_id`
+  --> src/df/cards/df_007_nidoqueen.rs:57:42
+   |
+57 | pub fn vengeance_bonus(game: &GameState, attacker_id: CardInstanceId) -> i32 {
+   |                                          ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_attacker_id`
+
+warning: function `count_pokemon_in_discard` is never used
+    --> src/df/runtime.rs:2962:15
+     |
+2962 | pub(crate) fn count_pokemon_in_discard(game: &GameState, attacker_id: CardInstanceId) -> u32 {
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` on by default
+
+warning: `tcg_expansions` (lib) generated 6 warnings (run `cargo fix --lib -p tcg_expansions` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.97s
+Compile exit code: 0
+
+=== Running cargo test ===
+   Compiling serde_core v1.0.228
+   Compiling libc v0.2.180
+   Compiling cfg-if v1.0.4
+   Compiling getrandom v0.2.17
+   Compiling zerocopy v0.8.33
+   Compiling serde v1.0.228
+   Compiling ppv-lite86 v0.2.21
+   Compiling rand_core v0.6.4
+   Compiling rand_chacha v0.3.1
+   Compiling zmij v1.0.13
+   Compiling itoa v1.0.17
+   Compiling memchr v2.7.6
+   Compiling thiserror v1.0.69
+   Compiling rand v0.8.5
+   Compiling serde_json v1.0.149
+   Compiling tcg_rules_ex v0.1.0
+   Compiling tcg_core v0.1.0
+   Compiling tcg_expansions v0.1.0 (/app)
+warning: unused imports: `PlayerId`, `Prompt`, and `SelectionDestination`
+  --> src/df/cards/df_007_nidoqueen.rs:16:43
+   |
+16 | use tcg_core::{CardInstanceId, GameState, PlayerId, Prompt, SelectionDestination};
+   |                                           ^^^^^^^^  ^^^^^^  ^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused variable: `game`
+  --> src/df/cards/df_007_nidoqueen.rs:35:27
+   |
+35 | pub fn execute_invitation(game: &mut GameState, source_id: CardInstanceId) -> bool {
+   |                           ^^^^ help: if this is intentional, prefix it with an underscore: `_game`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `source_id`
+  --> src/df/cards/df_007_nidoqueen.rs:35:49
+   |
+35 | pub fn execute_invitation(game: &mut GameState, source_id: CardInstanceId) -> bool {
+   |                                                 ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_source_id`
+
+warning: unused variable: `game`
+  --> src/df/cards/df_007_nidoqueen.rs:57:24
+   |
+57 | pub fn vengeance_bonus(game: &GameState, attacker_id: CardInstanceId) -> i32 {
+   |                        ^^^^ help: if this is intentional, prefix it with an underscore: `_game`
+
+warning: unused variable: `attacker_id`
+  --> src/df/cards/df_007_nidoqueen.rs:57:42
+   |
+57 | pub fn vengeance_bonus(game: &GameState, attacker_id: CardInstanceId) -> i32 {
+   |                                          ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_attacker_id`
+
+warning: function `count_pokemon_in_discard` is never used
+    --> src/df/runtime.rs:2962:15
+     |
+2962 | pub(crate) fn count_pokemon_in_discard(game: &GameState, attacker_id: CardInstanceId) -> u32 {
+     |               ^^^^^^^^^^^^^^^^^^^^^^^^
+     |
+     = note: `#[warn(dead_code)]` on by default
+
+warning: `tcg_expansions` (lib) generated 6 warnings (run `cargo fix --lib -p tcg_expansions` to apply 1 suggestion)
+warning: `tcg_expansions` (lib test) generated 6 warnings (6 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.42s
+     Running unittests src/lib.rs (target/debug/deps/tcg_expansions-e481ef451198dcec)
+
+running 20 tests
+test df::cards::df_007_nidoqueen::behavioral_tests::eval_execute_invitation_sets_prompt ... FAILED
+test df::cards::df_007_nidoqueen::behavioral_tests::eval_vengeance_bonus_caps_at_60 ... FAILED
+test df::cards::df_007_nidoqueen::eval_tests::eval_ability_1_text ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_attack_1_text ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_execute_invitation_signature ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_invitation_effect_id_exact ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_invitation_effect_id_format ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_invitation_effect_id_signature ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_invitation_once_per_turn ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_name_constant ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_name_has_delta ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_number_constant ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_set_constant ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_bonus_signature ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_caps_at_60 ... FAILED
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_0_pokemon_in_discard ... ok
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_1_pokemon_in_discard ... FAILED
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_3_pokemon_in_discard ... FAILED
+test df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_6_pokemon_in_discard ... FAILED
+test df::cards::df_007_nidoqueen::tests::test_invitation_effect_id ... ok
+
+failures:
+
+---- df::cards::df_007_nidoqueen::behavioral_tests::eval_execute_invitation_sets_prompt stdout ----
+thread 'df::cards::df_007_nidoqueen::behavioral_tests::eval_execute_invitation_sets_prompt' panicked at src/df/cards/df_007_nidoqueen.rs:682:9:
+assertion failed: result
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- df::cards::df_007_nidoqueen::behavioral_tests::eval_vengeance_bonus_caps_at_60 stdout ----
+thread 'df::cards::df_007_nidoqueen::behavioral_tests::eval_vengeance_bonus_caps_at_60' panicked at src/df/cards/df_007_nidoqueen.rs:697:9:
+assertion `left == right` failed
+  left: 0
+ right: 60
+
+---- df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_caps_at_60 stdout ----
+thread 'df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_caps_at_60' panicked at src/df/cards/df_007_nidoqueen.rs:289:9:
+assertion `left == right` failed: With 10 Pokemon in discard, bonus should cap at 60, got 0
+  left: 0
+ right: 60
+
+---- df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_1_pokemon_in_discard stdout ----
+thread 'df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_1_pokemon_in_discard' panicked at src/df/cards/df_007_nidoqueen.rs:268:9:
+assertion `left == right` failed: With 1 Pokemon in discard, bonus should be 10, got 0
+  left: 0
+ right: 10
+
+---- df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_3_pokemon_in_discard stdout ----
+thread 'df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_3_pokemon_in_discard' panicked at src/df/cards/df_007_nidoqueen.rs:275:9:
+assertion `left == right` failed: With 3 Pokemon in discard, bonus should be 30, got 0
+  left: 0
+ right: 30
+
+---- df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_6_pokemon_in_discard stdout ----
+thread 'df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_6_pokemon_in_discard' panicked at src/df/cards/df_007_nidoqueen.rs:282:9:
+assertion `left == right` failed: With 6 Pokemon in discard, bonus should be 60, got 0
+  left: 0
+ right: 60
+
+
+failures:
+    df::cards::df_007_nidoqueen::behavioral_tests::eval_execute_invitation_sets_prompt
+    df::cards::df_007_nidoqueen::behavioral_tests::eval_vengeance_bonus_caps_at_60
+    df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_caps_at_60
+    df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_1_pokemon_in_discard
+    df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_3_pokemon_in_discard
+    df::cards::df_007_nidoqueen::eval_tests::eval_vengeance_with_6_pokemon_in_discard
+
+test result: FAILED. 14 passed; 6 failed; 0 ignored; 0 measured; 90 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p tcg_expansions --lib`
+
+Test results: 14 passed / 20 total
+
+=== Verifier complete ===
+Score: 0.7900
+{
+  "compile_ok": 1,
+  "tests_passed": 14,
+  "tests_total": 20,
+  "pass_rate": 0.7000,
+  "score": 0.7900
+}

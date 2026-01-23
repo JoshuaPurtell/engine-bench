@@ -1,0 +1,17 @@
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+{"type":"thread.started","thread_id":"019be81d-2d0d-78b0-8704-6b660b0b63e8"}
+{"type":"turn.started"}
+2026-01-22T23:49:45.060877Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"Reconnecting... 1/5 (unexpected status 401 Unauthorized: )"}
+2026-01-22T23:49:45.498722Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"Reconnecting... 2/5 (unexpected status 401 Unauthorized: )"}
+2026-01-22T23:49:46.105361Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"Reconnecting... 3/5 (unexpected status 401 Unauthorized: )"}
+2026-01-22T23:49:47.217461Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"Reconnecting... 4/5 (unexpected status 401 Unauthorized: )"}
+2026-01-22T23:49:49.340675Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"Reconnecting... 5/5 (unexpected status 401 Unauthorized: )"}
+2026-01-22T23:49:52.824701Z ERROR codex_api::endpoint::responses: error=http 401 Unauthorized: Some("{\n  \"error\": {\n    \"message\": \"Incorrect API key provided: ''. You can find your API key at https://platform.openai.com/account/api-keys.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": null,\n    \"code\": \"invalid_api_key\"\n  }\n}")
+{"type":"error","message":"unexpected status 401 Unauthorized: "}
+{"type":"turn.failed","error":{"message":"unexpected status 401 Unauthorized: "}}

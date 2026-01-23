@@ -14,7 +14,7 @@ Designed to span a wide range of difficulties, with some cards easy enough for s
 - **Scoring**: Based on compilation success, test pass rate, and similarity to reference implementations
 
 For the GEPA walkthrough and how to optimize a coding agent on EngineBench with Synth AI, see
-https://docs.usesynth.ai/cookbooks/coding-agent-optimization.
+[https://docs.usesynth.ai/cookbooks/coding-agent-optimization](https://docs.usesynth.ai/cookbooks/coding-agent-optimization).
 
 ## Example Task
 

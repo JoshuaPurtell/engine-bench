@@ -1,0 +1,15 @@
+Creating new AsyncDaytona client
+Building environment from Dockerfile tasks/df-001-ampharos/environment/Dockerfile
+Building environment from Dockerfile tasks/df-006-nidoking/environment/Dockerfile
+Trial df-001-ampharos__dDaNNny failed: Failed to create sandbox: Disk request 20GB exceeds maximum allowed per sandbox (10GB).
+Need higher resource limits per-sandbox? Contact us at support@daytona.io and let us know about your use case.
+Trial df-006-nidoking__Tb7EpCf failed: Failed to create sandbox: Disk request 20GB exceeds maximum allowed per sandbox (10GB).
+Need higher resource limits per-sandbox? Contact us at support@daytona.io and let us know about your use case.
+Failed to download logs to jobs/2026-01-22__16-12-53/df-001-ampharos__dDaNNny/agent
+Sandbox not found. Please build the environment first.
+Not retrying trial because the maximum number of retries has been reached
+Failed to download logs to jobs/2026-01-22__16-12-53/df-006-nidoking__Tb7EpCf/agent
+Sandbox not found. Please build the environment first.
+Not retrying trial because the maximum number of retries has been reached
+Closing AsyncDaytona client at program exit
+AsyncDaytona client closed successfully

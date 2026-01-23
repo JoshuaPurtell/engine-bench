@@ -1,0 +1,27 @@
+{
+    "id": "eb02081f-ecf8-46f3-a8aa-5561970ba042",
+    "started_at": "2026-01-22T15:36:10.421394",
+    "finished_at": "2026-01-22T15:36:46.363605",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 1,
+        "evals": {
+            "oracle__adhoc": {
+                "n_trials": 0,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "reward_stats": {},
+                "exception_stats": {
+                    "RewardFileNotFoundError": [
+                        "df-007-nidoqueen__phE993s"
+                    ]
+                }
+            }
+        }
+    }
+}
