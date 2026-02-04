@@ -1,3 +1,76 @@
+# Engine-Bench (Harbor)
+
+Harbor-format benchmark tasks for evaluating coding agents on game engine implementations in Rust. This repo is a thin wrapper — it contains **no core engine code**. All source is imported from upstream repos at build/generation time.
+
+## Engine-Bench Tasks
+
+154 tasks across three game engines:
+
+| Engine | Source Repo | Tasks | Description |
+|--------|------------|-------|-------------|
+| **Engine-Bench TCG** | [engine-bench-tcg](https://github.com/JoshuaPurtell/engine-bench-tcg) | 128 | Pokemon TCG card implementations (Dragon Frontiers + Holon Phantoms) |
+| **Netter** | [liter](https://github.com/JoshuaPurtell/liter) | 13 | NetHack-like roguelike module implementations |
+| **Crafter** | [crafter-rs](https://github.com/JoshuaPurtell/crafter-rs) | 12 | Minecraft-like 2D survival game module implementations |
+
+Each task provides a stub file with TODOs. Agents must implement the module so it compiles and passes deterministic Rust tests. Scoring: `0.3` for compilation + `0.7 * (tests_passed / tests_total)`.
+
+### Running Tasks
+
+```bash
+# Install Harbor
+uv tool install harbor
+
+# Run a single task
+harbor run -p "tasks/df-001-ampharos" -m <provider/model>
+
+# Run with oracle solution
+harbor run -p "tasks/netter-rewards" --oracle
+```
+
+### Regenerating Tasks
+
+Tasks are pre-generated in `tasks/`, but you can regenerate them from source:
+
+```bash
+# Regenerate all (auto-clones source repos into source_repos/)
+python generate_tasks.py --all --force
+
+# Regenerate only engine-bench TCG tasks
+python generate_tasks.py --engine-bench --force
+
+# Regenerate only netter tasks
+python generate_tasks.py --netter --force
+
+# List all available tasks
+python generate_tasks.py --list
+```
+
+### Building Base Docker Images
+
+Base images are pre-built on Docker Hub (`joshpurtells/tb3-*-base`). To rebuild:
+
+```bash
+bash build_and_push_bases.sh                # all three
+bash build_and_push_bases.sh --engine-bench  # just TCG
+bash build_and_push_bases.sh --netter        # just netter
+bash build_and_push_bases.sh --no-push       # build only
+```
+
+### Repo Structure
+
+```
+engine-bench/
+├── tasks/                  # 154 pre-generated Harbor task directories
+├── bases/                  # Dockerfiles for base images (clone from upstream)
+├── ci_checks/              # Validation scripts
+├── generate_tasks.py       # Task generator (auto-clones source repos)
+├── dataset.json            # Task metadata index
+├── build_and_push_bases.sh # Base image build script
+└── source_repos/           # (gitignored) cloned source repos
+```
+
+---
+
 # Terminal-Bench 3.0
 
 ```
@@ -23,7 +96,7 @@
 
 Terminal-Bench is a popular benchmark for measuring the capabilities of agents and language models to perform valuable work in containerized environments. Tasks include assembling proteins for synthesis, debugging async code, and resolving security vulnerabilities. It is used by virtually all frontier labs.
 
-**🚧 This repo is the ongoing effort to construct the next version of Terminal Bench 🚧**. We are currently accepting [task submissions](#contributing-tasks). Our goal is to construct an even more challenging set of realistic and valuable tasks that pushes beyond the limits of current frontier models. Explore [task ideas](IDEAS.md) for inspiration.
+This repo also serves as a contribution to Terminal-Bench 3.0. We are currently accepting [task submissions](#contributing-tasks). Explore [task ideas](IDEAS.md) for inspiration.
 
 ## Contributing Tasks
 
@@ -34,8 +107,8 @@ We're actively looking for contributors to add new, challenging tasks.
 1. **Clone this repo**
 
    ```bash
-   git clone https://github.com/harbor-framework/terminal-bench-3.git
-   cd terminal-bench-3
+   git clone https://github.com/JoshuaPurtell/engine-bench.git
+   cd engine-bench
    ```
 
 2. **Install [Harbor](https://github.com/laude-institute/harbor)**, our package for evaluating and optimizing agents:
